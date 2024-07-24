@@ -7,7 +7,7 @@ const Card = () => {
             <p className="text-[13px] sm:text-[15px] lg:text-[16px] text-center font-inter font-normal text-[#707076] mt-[20px] sm:mt-[25px] md:mt-[30px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua consectetur adipiscing elit , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
         </div>
         <div className="image-card mt-[15px]">
-            <img src="/public/пада бой.png" alt="" />
+            <img src="/пада бой.png" alt="" />
         </div>
     </div>
   )

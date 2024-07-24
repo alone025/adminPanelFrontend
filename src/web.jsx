@@ -37,12 +37,12 @@ const Web = () => {
         </div>
         <div className="right-picture flex items-center xl:block xl:items-baseline">
           <img
-            src="/public/Frame 267.png"
+            src="/Frame 267.png"
             alt=""
             className="absolute w-[650px] lg:w-[800px] xl:w-[1000px] 2xl:w-auto -z-10 right-0 top-0"
           />
 
-          <img src="/public/Component 1.png" alt="" />
+          <img src="/Component 1.png" alt="" />
         </div>
       </div>
 
