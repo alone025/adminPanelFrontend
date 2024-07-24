@@ -47,28 +47,83 @@ const Web = () => {
         </div>
       </div>
 
+      <div className="bg-page">
+        {/* Cards */}
+        <div className="cards flex flex-col md:flex-row gap-5 mt-[60px]">
+          <Card />
+          <Card />
+        </div>
 
-    <div className="bg-page">
+        {/* Short page */}
 
-      {/* Cards */}
-      <div className="cards flex flex-col md:flex-row gap-5 mt-[60px]">
-        <Card/>
-        <Card/>
+        <div className="short-page mt-[160px]">
+          <ShortPage />
+        </div>
+
+        <div className="bg">
+          <img
+            src="/Frame 268.png"
+            alt=""
+            className="absolute hidden md:block md:top-[2380px] lg:top-[1500px] left-0 w-[-webkit-fill-available] -z-10"
+          />
+        </div>
       </div>
 
+      <div className="game-page mt-[300px] lg:mt-[600px] xl:mt-[500px] 2xl:mt-[400px] flex flex-col xl:flex-row justify-between">
+        <div className="left-side xl:max-w-[644px]">
+          <h3 className="text-[32px] sm:text-[34px] md:text-[36px] font-inter font-semibold  text-[#FFF] lg:text-[#191B21] mb-[33px] ">Информация про плоформу</h3>
+          <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-[#FFF] lg:text-[#191B21] font-azosansLight opacity-60 flex flex-col" >
+            <span className="font-azosans" >
+              Cryptocurrency adoption is at less than 1% of the global world
+              population with some countries and entities actively fighting
+              against its mass adoption and the smartest developers and nerds
+              holding the fort.
+            </span>
+            <br />
+            Bitcoin was the first, and it has since grown to thousands of tokens
+            launched all aiming to fix one problem or the other with some quite
+            simply FOMOing the moment. Our goal is to bring mass adoption to the
+            cryptocurrency space by dumbing it down. How far down? So down that
+            even a celebrity can explain it in simple words to their followers
+            and have them download an app, buy into the social currency of their
+            favourite person and watch their investment as is with other
+            cryptocurrency project. <br />
+            <span className="mt-[15px]" >
+              {" "}
+              We are trying to do to this space what investment apps did for the
+              "nonexistent retail investors". We are gamefying digital currency,
+              bringing in popular faces instead of hard to understand projects
+              to make it the norm and inadvertently being the "gateway drug" for
+              a lot of people to finally give this space a real look.{" "}
+            </span>
+          </p>
 
-{/* Short page */}
-
-<div className="short-page mt-[160px]">
-    <ShortPage/>
-</div>
-
-<div className="bg">
-  <img src="/Frame 268.png" alt="" className="absolute top-[3200px] md:top-[2380px] lg:top-[1500px] left-0 w-[-webkit-fill-available] -z-10" />
-</div>
-    </div>
-
-
+          <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-[#FFF] lg:text-[#191B21] font-azosansLight opacity-60 mt-[40px] flex flex-col" >
+            <span className="font-azosans" >
+              A new digital economy is coming. People would be just as powerful
+              as countries and creators would be paid beyond the peanuts that
+              conventional social media platforms can offer.
+            </span>
+            <br />
+            There would be new markets and advertisers with little to offer
+            would not find home there. Like Kanye said, "Personalities would
+            become the new currency, and services would be built on top of
+            them". Well, Kanye didn't exactly say that, but it sounds like
+            something we hope he would say. <br /><span className="mt-[15px]" > Currency is digital, it has
+            been that way for a while now, but this time there would be no dead
+            presidents on the money, there would people like you on the money,
+            and you would own it because it would make the most sense in the
+            world.</span>
+          </p>
+        </div>
+        <div className="img-side">
+          <img
+            src="/3d-render-game-equipment-console-headset-free-png 2.png"
+            alt=""
+          />
+        </div>
+        <img src="../public/Subtract.png" alt="" className="absolute hidden lg:block lg:top-[2460px] left-0 w-[-webkit-fill-available] -z-10" />
+      </div>
     </div>
   );
 };
