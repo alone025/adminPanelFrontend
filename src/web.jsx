@@ -1,4 +1,5 @@
 import Card from "./components/card/card";
+import ShortPage from "./components/short-page/shortPage";
 
 const Web = () => {
   return (
@@ -47,11 +48,27 @@ const Web = () => {
       </div>
 
 
-{/* Cards */}
+    <div className="bg-page">
+
+      {/* Cards */}
       <div className="cards flex flex-col md:flex-row gap-5 mt-[60px]">
         <Card/>
         <Card/>
       </div>
+
+
+{/* Short page */}
+
+<div className="short-page mt-[160px]">
+    <ShortPage/>
+</div>
+
+<div className="bg">
+  <img src="/Frame 268.png" alt="" className="absolute top-[3200px] md:top-[2380px] lg:top-[1500px] left-0 w-[-webkit-fill-available] -z-10" />
+</div>
+    </div>
+
+
     </div>
   );
 };

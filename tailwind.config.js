@@ -8,7 +8,8 @@ export default {
     fontFamily: {
       'popins': ["Poppins",  'sans-serif'],
       "inter": ["Inter", "sans-serif"],
-      "azosans": ['AzonSans', "sans-serif"]
+      "azosans": ['AzonSans', "sans-serif"],
+      "azosansLight": ['AzonSans-light', "sans-serif"]
     },
     extend: {},
   },

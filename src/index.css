@@ -9,6 +9,12 @@
   src: url("/fonts/AzoSansTest-Black-BF663af5f77b591.otf");
 }
 
+@font-face {
+  font-family: "AzonSans-light";
+  src: url("/fonts/AzoSansTest-Light-BF663af5f76f7ff.otf");
+}
+
+
 body {
   background: #032457;
 }
