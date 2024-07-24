@@ -18,3 +18,8 @@
 body {
   background: #032457;
 }
+
+.div-bg{
+  background: linear-gradient(90deg, #8E2741 0%, #1D1534 100%);
+
+}

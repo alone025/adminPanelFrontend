@@ -69,7 +69,7 @@ const Web = () => {
         </div>
       </div>
 
-      <div className="game-page mt-[300px] lg:mt-[600px] xl:mt-[500px] 2xl:mt-[400px] flex flex-col xl:flex-row justify-between">
+      <div className="game-page mt-[150px] sm:mt-[300px] lg:mt-[600px] xl:mt-[500px] 2xl:mt-[400px] flex flex-col xl:flex-row justify-between">
         <div className="left-side xl:max-w-[644px]">
           <h3 className="text-[32px] sm:text-[34px] md:text-[36px] font-inter font-semibold  text-[#FFF] lg:text-[#191B21] mb-[33px] ">Информация про плоформу</h3>
           <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-[#FFF] lg:text-[#191B21] font-azosansLight opacity-60 flex flex-col" >
@@ -124,6 +124,23 @@ const Web = () => {
         </div>
         <img src="../public/Subtract.png" alt="" className="absolute hidden lg:block lg:top-[2460px] left-0 w-[-webkit-fill-available] -z-10" />
       </div>
+
+
+    {/* New block */}
+
+      <div className="new-block">
+        <div className="title">
+          <h3>Presale Details</h3>
+        </div>
+        <div className="tabs">
+          <div className="tab--">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <div className="div-bg w-[56px] h-[56px] rounded-full"></div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
   );
 };
