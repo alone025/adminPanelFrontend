@@ -54,7 +54,7 @@ const AboutPage = () => {
 
 	return (
 		<>
-			<div className=''>
+			<div className='pt-[50px]'>
 				<svg
 					className='absolute top-0 left-0 w-full h-auto z-[-1]'
 					viewBox='0 0 1440 800'
