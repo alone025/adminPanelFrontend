@@ -15,10 +15,10 @@ function Blog_cards() {
 					transition={{ duration: 1 }}
 					src='../public/Subtract2.png'
 					alt='Background'
-					className='absolute top-0 left-0 w-full -z-10 '
+					className='absolute top-0 left-0 w-full 2xl:h-full -z-10 '
 				/>
 				<Wrapper>
-					<div className='flex flex-col justify-center items-center '>
+					<div className='flex flex-col justify-center items-center mx-[50px] 2xl:mx-0 2xl:h-screen'>
 						<motion.div
 							initial={{ opacity: 0, y: 50 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -26,10 +26,10 @@ function Blog_cards() {
 							transition={{ duration: 0.6 }}
 							className='text-center mt-[250px]'
 						>
-							<h3 className='text-xl md:text-4xl font-inter font-bold text-white md:text-[#191B21]'>
+							<h3 className='text-xl md:text-4xl font-inter font-bold text-[#191B21]'>
 								Lorem ipsum dolor sit amet
 							</h3>
-							<p className='text-sm md:text-base font-medium font-inter text-white md:text-[#191B21] mt-5 md:mt-12 max-w-2xl mx-auto'>
+							<p className='text-sm md:text-base font-medium font-inter text-[#191B21] mt-5 md:mt-12 max-w-2xl mx-auto'>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 								eiusmod tempor incididunt ut labore et dolore magna
 							</p>
@@ -39,7 +39,7 @@ function Blog_cards() {
 							whileInView={{ opacity: 1 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.8, delay: 0.2 }}
-							className='flex flex-wrap justify-center xl:flex-nowrap gap-5 mt-20 z-10'
+							className='flex flex-wrap justify-center xl:flex-nowrap gap-5 mt-10 z-10'
 						>
 							<CardHomeBlog />
 							<CardHomeBlog />
