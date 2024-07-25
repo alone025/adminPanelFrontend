@@ -69,7 +69,7 @@ const AboutPage = () => {
 				<div className='container mx-auto px-4 sm:px-6 lg:px-8 py-12'>
 					<div className='flex flex-col gap-[100px] lg:flex-row lg:items-start'>
 						<motion.div
-							className='flex flex-col mt-[100px] items-start max-w-2xl lg:max-w-3xl'
+							className='flex flex-col relative mt-[100px] items-start max-w-2xl lg:max-w-3xl'
 							ref={aboutRef}
 							initial='hidden'
 							animate={aboutAnimationControls}
