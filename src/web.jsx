@@ -9,7 +9,7 @@ import ShortPage from './components/short-page/shortPage'
 
 const Web = () => {
 	return (
-		<div className='web-main px-8 sm:px-10 md:px-12'>
+		<div className='web-main'>
 			<Main />
 			<div className=''>
 				{/* Cards */}
@@ -17,13 +17,6 @@ const Web = () => {
 				{/* Short page */}
 				<div className='short-page mt-[160px]'>
 					<ShortPage />
-				</div>
-				<div className='bg'>
-					<img
-						src='/Frame 268.png'
-						alt=''
-						className='absolute hidden md:block md:top-[2100px] lg:top-[1500px] left-0 w-[-webkit-fill-available] -z-10'
-					/>
 				</div>
 			</div>
 

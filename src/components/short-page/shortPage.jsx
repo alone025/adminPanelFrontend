@@ -1,6 +1,7 @@
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import Wrapper from '../../layout/wrapper'
 
 const ShortPage = () => {
 	const controls = useAnimation()
@@ -25,40 +26,52 @@ const ShortPage = () => {
 	}
 
 	return (
-		<motion.div
-			className='lkmljnn flex flex-col lg:flex-row justify-around gap-[50px] lg:gap-[70px] xl:gap-[79px]'
-			ref={ref}
-			initial='hidden'
-			animate={controls}
-			variants={containerVariants}
-		>
-			<div className='lkjm lg:max-w-[500px]'>
-				<h3 className='text-[32px] sm:text-[34px] md:text-[36px] lg:text-[40px] xl:text-[48px] font-semibold font-inter text-[#FBF9ED]'>
-					Про платформу Urban Clans
-				</h3>
+		<div className='relative'>
+			<div className='absolute inset-0 w-full min-h-screen -z-10'>
+				<img
+					src='/public/Frame 268.png'
+					alt='Background'
+					className='absolute bottom-0 left-0 w-full'
+				/>
 			</div>
-			<div className='rhis relative -z-[1] max-w-max lg:max-w-[560px] xl:max-w-[600px]'>
-				<p className='text-[13px] sm:text-[14px] md:text-[15px] xl:text-[16px] font-medium font-azosans text-[#fff] opacity-60 mb-[30px]'>
-					We would only launch tokens with the express permission of the
-					creators.
-				</p>
-				<p className='text-[13px] sm:text-[14px] md:text-[15px] xl:text-[16px] font-light font-azosansLight text-[#fff] opacity-60 mb-[15px]'>
-					There are several thousand celebrities and creators on twitter,
-					tiktok, Instagram and YouTube with followings in the millions who we
-					would be <span className='font-medium'>actively engaging</span> before
-					we go viral.
-				</p>
-				<p className='text-[13px] sm:text-[14px] md:text-[15px] xl:text-[16px] font-light font-azosansLight text-[#fff] opacity-60'>
-					We would get them on our platform and they would see the opportunity
-					to create a fan driven digital economy where their digital content can
-					be traded as NFTs and their most loyal fans can have the monetary
-					value of their creator's currency increase{' '}
-					<span className='font-medium'>significantly</span> as they promote
-					their digital currency across their channels while our native token
-					holders benefit from the Tokners popularity.
-				</p>
-			</div>
-		</motion.div>
+			<Wrapper>
+				<motion.div
+					className='flex flex-col lg:flex-row justify-around gap-12 lg:gap-16 xl:gap-20 mx-[50px] 2xl:mx-0'
+					ref={ref}
+					initial='hidden'
+					animate={controls}
+					variants={containerVariants}
+				>
+					<div className='max-w-lg'>
+						<h3 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white'>
+							Про платформу Urban Clans
+						</h3>
+					</div>
+					<div className='relative max-w-lg lg:max-w-xl xl:max-w-2xl'>
+						<p className='text-sm sm:text-base md:text-lg xl:text-xl font-medium text-white opacity-60 mb-8'>
+							We would only launch tokens with the express permission of the
+							creators.
+						</p>
+						<p className='text-sm sm:text-base md:text-lg xl:text-xl font-light text-white opacity-60 mb-4'>
+							There are several thousand celebrities and creators on Twitter,
+							TikTok, Instagram, and YouTube with followings in the millions who
+							we would be
+							<span className='font-medium'> actively engaging</span> before we
+							go viral.
+						</p>
+						<p className='text-sm sm:text-base md:text-lg xl:text-xl font-light text-white opacity-60'>
+							We would get them on our platform and they would see the
+							opportunity to create a fan-driven digital economy where their
+							digital content can be traded as NFTs and their most loyal fans
+							can have the monetary value of their creator's currency increase{' '}
+							<span className='font-medium'>significantly</span> as they promote
+							their digital currency across their channels while our native
+							token holders benefit from the token's popularity.
+						</p>
+					</div>
+				</motion.div>
+			</Wrapper>
+		</div>
 	)
 }
 
