@@ -42,7 +42,7 @@ function Information() {
 			initial='hidden'
 			animate={inView ? 'visible' : 'hidden'}
 			variants={containerVariants}
-			className='game-page mt-[150px] sm:mt-[300px] lg:mt-[600px] xl:mt-[600px] 2xl:mt-[400px] flex flex-col xl:flex-row justify-between h-screen items-center'
+			className='game-page mt-[150px] sm:mt-[300px] lg:mt-[600px] xl:mt-[300px] 2xl:mt-[400px] flex flex-col xl:flex-row justify-between h-screen items-center'
 		>
 			<div className='left-side xl:max-w-[644px]'>
 				<motion.h3
@@ -114,7 +114,7 @@ function Information() {
 				variants={imageVariants}
 				src='/Subtract.png'
 				alt=''
-				className='absolute hidden lg:block lg:top-[2460px] left-0 w-[-webkit-fill-available] -z-10'
+				className='absolute hidden lg:block lg:top-[2060px] left-0 w-[-webkit-fill-available] -z-10'
 			/>
 		</motion.div>
 	)

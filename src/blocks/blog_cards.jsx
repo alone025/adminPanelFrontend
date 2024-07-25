@@ -5,7 +5,7 @@ import CardHomeBlog from '../components/cardHomeBlog/cardHomeBlog'
 function Blog_cards() {
 	return (
 		<>
-			<div className='cards-blog mt-[900px] lg:mt-[250px] xl:mt-[300px] 2xl:mt-[450px] h-screen'>
+			<div className='cards-blog mt-[900px] lg:mt-[250px] xl:mt-[340px] 2xl:mt-[450px] h-screen'>
 				<div className='flex flex-col justify-center items-center h-full'>
 					<motion.div
 						initial={{ opacity: 0, y: 50 }}
@@ -43,7 +43,7 @@ function Blog_cards() {
 					transition={{ duration: 1 }}
 					src='../public/Subtract2.png'
 					alt=''
-					className='absolute top-[7800px] md:top-[9200px] lg:top-[7755px] xl:top-[6000px] left-0 w-full -z-10 hidden md:block'
+					className='absolute top-[7800px] md:top-[9200px] lg:top-[7755px] xl:top-[5800px] left-0 w-full -z-10 hidden md:block'
 				/>
 			</div>
 		</>
