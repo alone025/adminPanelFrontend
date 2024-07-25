@@ -1,9 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Wrapper from "../../layout/wrapper";
 
 const Footer = () => {
+
+  const pathname = useLocation().pathname
+
+
   return (
-    <div className="footer mt-[200px] lg:mt-[280px] bg-[#1D1534] pt-[80px] sm:pt-[120px] pb-[60px] px-5 2xl:px-0">
+  <div className="pt-top">
+      <div className={`footer ${pathname == "/blog" ? "pt-[200px] lg:pt-[280px]":"mt-[200px] lg:mt-[280px] pt-[80px] sm:pt-[120px]"}  bg-[#1D1534] pb-[60px] px-5 2xl:px-0`}>
       <Wrapper>
         <div className="top-side flex flex-raw gap-3 flex-wrap justify-between">
           <div className="left-tap max-w-[455px]">
@@ -16,7 +21,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="middle-tap">
-            <p className="new-div text-[15px] sm:text-[17px] md:text-[19px] lg:text-[21px] text-[#FBF9ED] font-inter font-medium">
+            <p className="new-div mt-[15px] sm:mt-0 text-[15px] sm:text-[17px] md:text-[19px] lg:text-[21px] text-[#FBF9ED] font-inter font-medium">
               Navigation
             </p>
             <ul className="mt-4 flex flex-col gap-1">
@@ -44,7 +49,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="end-tap">
-            <p className="text-[15px] sm:text-[17px] md:text-[19px] lg:text-[21px] text-[#FBF9ED] font-inter font-medium">
+            <p className="text-[15px] mt-[15px] sm:mt-0 sm:text-[17px] md:text-[19px] lg:text-[21px] text-[#FBF9ED] font-inter font-medium">
               Contact us
             </p>
             <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FBF9ED] font-inter font-normal max-w-[360px] mt-7">
@@ -92,6 +97,7 @@ const Footer = () => {
         </div>
       </Wrapper>
     </div>
+  </div>
   );
 };
 

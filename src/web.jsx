@@ -4,6 +4,7 @@ import Cards2 from './blocks/cards2'
 import Details from './blocks/details'
 import Information from './blocks/information'
 import Main from './blocks/main'
+import MobileApps from './components/mobile-apps/mobileApps'
 import ShortPage from './components/short-page/shortPage'
 
 const Web = () => {
@@ -29,6 +30,8 @@ const Web = () => {
 			<Cards2 />
 
 			<Blog_cards />
+
+			<MobileApps/>
 		</div>
 	)
 }
