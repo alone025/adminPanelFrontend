@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Wrapper from "../../layout/wrapper";
 
 const Footer = () => {
@@ -19,15 +20,27 @@ const Footer = () => {
               Navigation
             </p>
             <ul className="mt-4 flex flex-col gap-1">
-              <li className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FBF9ED] font-inter font-normal">
-                Home page
-              </li>
-              <li className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FBF9ED] font-inter font-normal">
-                About company
-              </li>
-              <li className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FBF9ED] font-inter font-normal">
-                Our team
-              </li>
+              <Link to="/">
+                <li className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FBF9ED] font-inter font-normal">
+                  Home page
+                </li>
+              </Link>
+              <Link to="/aboutcompany">
+                <li className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FBF9ED] font-inter font-normal">
+                  About company
+                </li>
+              </Link>
+
+              <Link to="/ourteam">
+                <li className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FBF9ED] font-inter font-normal">
+                  Our team
+                </li>
+              </Link>
+              <Link to="/blog">
+                <li className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-[#FBF9ED] font-inter font-normal">
+                  Blog
+                </li>
+              </Link>
             </ul>
           </div>
           <div className="end-tap">
