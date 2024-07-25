@@ -38,7 +38,7 @@ function BlogPage() {
 
 	return (
 		<>
-			<div className='bg-[#1D1534] w-full'>
+			<div className='bg-[#1D1534] h-full w-full'>
 				<Wrapper>
 					<div className='pt-[200px] lg:mx-[50px] 2xl:mx-0'>
 						<div>
