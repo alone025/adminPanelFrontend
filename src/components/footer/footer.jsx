@@ -64,23 +64,23 @@ const Footer = () => {
           </div>
           <div className="social-links">
             <ul className="flex flex-row flex-wrap gap-[10px]">
-              <li className="p-[15px] rounded-[24px] border-white border-opacity-5 border">
-                <img src="../../../public/twitter (2) 1.svg" alt="" />
+              <li className="p-[15px] rounded-[24px] border-white border-opacity-5 border cursor-pointer">
+                <img src="/twitter (2) 1.svg" alt="" />
               </li>
-              <li className="p-[15px] rounded-[24px] border-white border-opacity-5 border">
-                <img src="../../../public/facebook (4) 1.svg" alt="" />
+              <li className="p-[15px] rounded-[24px] border-white border-opacity-5 border cursor-pointer">
+                <img src="/facebook (4) 1.svg" alt="" />
               </li>
-              <li className="p-[15px] rounded-[24px] border-white border-opacity-5 border">
-                <img src="../../../public/instagram (1) 1.svg" alt="" />
+              <li className="p-[15px] rounded-[24px] border-white border-opacity-5 border cursor-pointer">
+                <img src="/instagram (1) 1.svg" alt="" />
               </li>
-              <li className="p-[15px] rounded-[24px] border-white border-opacity-5 border">
-                <img src="../../../public/medium 1.svg" alt="" />
+              <li className="p-[15px] rounded-[24px] border-white border-opacity-5 border cursor-pointer">
+                <img src="/medium 1.svg" alt="" />
               </li>
-              <li className="p-[15px] rounded-[24px] border-white border-opacity-5 border">
-                <img src="../../../public/github 1.svg" alt="" />
+              <li className="p-[15px] rounded-[24px] border-white border-opacity-5 border cursor-pointer">
+                <img src="/github 1.svg" alt="" />
               </li>
-              <li className="p-[15px] rounded-[24px] border-white border-opacity-5 border">
-                <img src="../../../public/reddit 1.svg" alt="" />
+              <li className="p-[15px] rounded-[24px] border-white border-opacity-5 border cursor-pointer">
+                <img src="/reddit 1.svg" alt="" />
               </li>
             </ul>
           </div>
