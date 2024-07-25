@@ -4,6 +4,7 @@ import Web from './web';
 import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
 import AboutPage from './aboutPage';
+import BlogPage from './components/blog/blogPage'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Web/>}  />
         <Route path='/aboutcompany' element={<AboutPage/>}  />
+        <Route path='/blog' element={<BlogPage/>}  />
       </Routes>
       <Footer/>
     </Router>
