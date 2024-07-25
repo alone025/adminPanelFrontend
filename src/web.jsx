@@ -90,7 +90,7 @@ const Web = () => {
           <h3 className="text-[32px] sm:text-[34px] md:text-[36px] font-inter font-semibold  text-[#FFF] lg:text-[#191B21] mb-[33px] ">
             Информация про плоформу
           </h3>
-          <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-[#FFF] lg:text-[#191B21] font-azosansLight opacity-60 flex flex-col">
+          <p className="text-[13px] relative -z-[1] sm:text-[14px] md:text-[15px] lg:text-[16px] text-[#FFF] lg:text-[#191B21] font-azosansLight opacity-60 flex flex-col">
             <span className="font-azosans">
               Cryptocurrency adoption is at less than 1% of the global world
               population with some countries and entities actively fighting
@@ -116,7 +116,7 @@ const Web = () => {
             </span>
           </p>
 
-          <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-[#FFF] lg:text-[#191B21] font-azosansLight opacity-60 mt-[40px] flex flex-col">
+          <p className="text-[13px] relative -z-[1] sm:text-[14px] md:text-[15px] lg:text-[16px] text-[#FFF] lg:text-[#191B21] font-azosansLight opacity-60 mt-[40px] flex flex-col">
             <span className="font-azosans">
               A new digital economy is coming. People would be just as powerful
               as countries and creators would be paid beyond the peanuts that
