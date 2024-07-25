@@ -6,7 +6,7 @@ const ShortPage = () => {
     <div className="lkjm lg:max-w-[500px]">
         <h3 className="text-[32px] sm:text-[34px] md:text-[36px] lg:text-[40px] xl:text-[48px] font-semibold font-inter text-[#FBF9ED]">Про платформу Urban Clans</h3>
     </div>
-    <div className="rhis max-w-max lg:max-w-[560px] xl:max-w-[600px]">
+    <div className="rhis relative -z-[1] max-w-max lg:max-w-[560px] xl:max-w-[600px]">
         <p  className="text-[13px] sm:text-[14px] md:text-[15px] xl:text-[16px] font-medium font-azosans text-[#fff] opacity-60 mb-[30px]">
         We would only launch tokens with the express permission of the creators. 
         </p>
