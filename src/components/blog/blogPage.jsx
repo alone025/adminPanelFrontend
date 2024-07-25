@@ -67,8 +67,8 @@ function BlogPage() {
 											</button>
 										</div>
 										<div className='flex items-center flex-col sm:flex-row'>
-											<img src='/public/app-1 2.png' alt='app' />
-											<img src='/public/app-4 2.png' alt='app' />
+											<img src='/app-1 2.png' alt='app' />
+											<img src='/app-4 2.png' alt='app' />
 										</div>
 										<button className='bg-[#E61467] block xl:hidden rounded-[52px] px-[30px] py-[15px] text-white'>
 											Lorem ispum dolar amet
@@ -89,7 +89,7 @@ function BlogPage() {
 								</p>
 								<div className='mx-[40px]'>
 									<img
-										src='/public/blog_2.png'
+										src='/blog_2.png'
 										alt='blog'
 										className='mt-[100px]'
 									/>
@@ -124,7 +124,7 @@ function BlogPage() {
 											</div>
 										</div>
 										<div className='flex items-center'>
-											<img src='/public/blog_home.png' alt='home' />
+											<img src='/blog_home.png' alt='home' />
 										</div>
 										<div className='flex gap-[18px] xl:hidden flex-col sm:flex-row'>
 											<button className='bg-[#032457] rounded-[52px] px-[30px] py-[15px] text-white'>

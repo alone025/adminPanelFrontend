@@ -13,7 +13,7 @@ function Blog_cards() {
 					whileInView={{ opacity: 1 }}
 					viewport={{ once: true }}
 					transition={{ duration: 1 }}
-					src='../public/Subtract2.png'
+					src='/Subtract2.png'
 					alt='Background'
 					className='absolute top-0 left-0 w-full 2xl:h-full -z-10 '
 				/>

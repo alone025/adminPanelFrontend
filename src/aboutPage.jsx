@@ -79,7 +79,7 @@ const AboutPage = () => {
 								className='flex items-center gap-3 mb-4'
 								variants={textAnimation}
 							>
-								<img src='/public/Liner.png' alt='liner' />
+								<img src='/Liner.png' alt='liner' />
 								<h2 className='text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight'>
 									Lorem ipsum dolor sit amet
 								</h2>
@@ -111,7 +111,7 @@ const AboutPage = () => {
 							</div>
 						</motion.div>
 
-						<div
+						<motion.div
 							className='blurBackground flex justify-center items-center'
 							ref={secondSectionRef}
 							initial='hidden'
@@ -119,11 +119,11 @@ const AboutPage = () => {
 							variants={imageAnimation}
 						>
 							<img
-								src='/public/about_home.png'
+								src='/about_home.png'
 								alt='home'
 								className='md:w-[400px]'
 							/>
-						</div>
+						</motion.div>
 					</div>
 				</div>
 
@@ -136,14 +136,14 @@ const AboutPage = () => {
 				>
 					<div className='flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12 lg:gap-24'>
 						<motion.div className='w-[226px] lg:w-1/2' variants={imageAnimation}>
-							<img src='/public/кот2.png' alt='кот' />
+							<img src='/кот2.png' alt='кот' />
 						</motion.div>
 						<motion.div className='flex flex-col items-start w-full lg:w-1/2'>
 							<motion.div
 								className='flex items-center gap-2 md:gap-4'
 								variants={textAnimation}
 							>
-								<img src='/public/about_label_icon.svg' alt='label' />
+								<img src='/about_label_icon.svg' alt='label' />
 								<p className='font-popins text-lg md:text-xl'>About us</p>
 							</motion.div>
 							<motion.div variants={textAnimation}>
@@ -185,7 +185,7 @@ const AboutPage = () => {
 				</motion.div>
 			</div>
 			<img
-				src='/public/about_bg.svg'
+				src='/about_bg.svg'
 				alt='bg'
 				className='absolute flex justify-center z-[-1] top-[0]'
 			/>

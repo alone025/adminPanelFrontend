@@ -29,9 +29,9 @@ const ShortPage = () => {
 		<div className='relative'>
 			<div className='absolute inset-0 w-full min-h-screen -z-10'>
 				<img
-					src='/public/Frame 268.png'
+					src='/Frame 268.png'
 					alt='Background'
-					className='absolute bottom-0 left-0 w-full'
+					className='absolute bottom-0 left-0 h-full md:h-auto w-full'
 				/>
 			</div>
 			<Wrapper>

@@ -10,7 +10,7 @@ const CardHomeBlog = () => {
 					Lorem ipsum dolor sit amet, consec adipiscing elit, sed consec
 					adipiscing elit, sed consec adipiscing elit, sed{' '}
 				</p>
-				<button className='rounded-[52px] mt-4 bg-[#E61467] hover:text-[#E61467] transition-all hover:bg-transparent hover:border hover:border-[#E61467] hover:py-[8px] py-[9px] text-[14px] font-inter font-[600] text-[#fff]'>
+				<button className='rounded-[52px] mt-4 bg-[#E61467] hover:text-[#E61467] transition-all hover:bg-transparent hover:border hover:border-[#E61467] hover:py-[8px] py-[9px] text-[13px] md:text-[14px] font-inter font-[600] text-[#fff]'>
 					Узнать подробнее
 				</button>
 			</div>

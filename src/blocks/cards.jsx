@@ -79,7 +79,7 @@ function Cards() {
 							className='image-card mt-[15px]'
 							variants={imageVariants}
 						>
-							<img src='/public/пада бой.png' alt='' />
+							<img src='/пада бой.png' alt='' />
 						</motion.div>
 					</motion.div>
 					<motion.div
@@ -105,7 +105,7 @@ function Cards() {
 							className='image-card mt-[15px]'
 							variants={imageVariants}
 						>
-							<img src='/public/панда гёл.png' alt='' />
+							<img src='/панда гёл.png' alt='' />
 						</motion.div>
 					</motion.div>
 				</div>
