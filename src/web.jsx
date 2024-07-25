@@ -85,70 +85,70 @@ const Web = () => {
 				</div>
 			</div>
 
-      <div className="game-page mt-[150px] sm:mt-[300px] lg:mt-[600px] xl:mt-[500px] 2xl:mt-[400px] flex flex-col xl:flex-row justify-between">
-        <div className="left-side xl:max-w-[644px]">
-          <h3 className="text-[32px] sm:text-[34px] md:text-[36px] font-inter font-semibold  text-[#FFF] lg:text-[#191B21] mb-[33px] ">
-            Информация про плоформу
-          </h3>
-          <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-[#FFF] lg:text-[#191B21] font-azosansLight opacity-60 flex flex-col">
-            <span className="font-azosans">
-              Cryptocurrency adoption is at less than 1% of the global world
-              population with some countries and entities actively fighting
-              against its mass adoption and the smartest developers and nerds
-              holding the fort.
-            </span>
-            <br />
-            Bitcoin was the first, and it has since grown to thousands of tokens
-            launched all aiming to fix one problem or the other with some quite
-            simply FOMOing the moment. Our goal is to bring mass adoption to the
-            cryptocurrency space by dumbing it down. How far down? So down that
-            even a celebrity can explain it in simple words to their followers
-            and have them download an app, buy into the social currency of their
-            favourite person and watch their investment as is with other
-            cryptocurrency project. <br />
-            <span className="mt-[15px]">
-              {" "}
-              We are trying to do to this space what investment apps did for the
-              "nonexistent retail investors". We are gamefying digital currency,
-              bringing in popular faces instead of hard to understand projects
-              to make it the norm and inadvertently being the "gateway drug" for
-              a lot of people to finally give this space a real look.{" "}
-            </span>
-          </p>
+			<div className='game-page mt-[150px] sm:mt-[300px] lg:mt-[600px] xl:mt-[500px] 2xl:mt-[400px] flex flex-col xl:flex-row justify-between'>
+				<div className='left-side xl:max-w-[644px]'>
+					<h3 className='text-[32px] sm:text-[34px] md:text-[36px] font-inter font-semibold  text-[#FFF] lg:text-[#191B21] mb-[33px] '>
+						Информация про плоформу
+					</h3>
+					<p className='text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-[#FFF] lg:text-[#191B21] font-azosansLight opacity-60 flex flex-col'>
+						<span className='font-azosans'>
+							Cryptocurrency adoption is at less than 1% of the global world
+							population with some countries and entities actively fighting
+							against its mass adoption and the smartest developers and nerds
+							holding the fort.
+						</span>
+						<br />
+						Bitcoin was the first, and it has since grown to thousands of tokens
+						launched all aiming to fix one problem or the other with some quite
+						simply FOMOing the moment. Our goal is to bring mass adoption to the
+						cryptocurrency space by dumbing it down. How far down? So down that
+						even a celebrity can explain it in simple words to their followers
+						and have them download an app, buy into the social currency of their
+						favourite person and watch their investment as is with other
+						cryptocurrency project. <br />
+						<span className='mt-[15px]'>
+							{' '}
+							We are trying to do to this space what investment apps did for the
+							"nonexistent retail investors". We are gamefying digital currency,
+							bringing in popular faces instead of hard to understand projects
+							to make it the norm and inadvertently being the "gateway drug" for
+							a lot of people to finally give this space a real look.{' '}
+						</span>
+					</p>
 
-          <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-[#FFF] lg:text-[#191B21] font-azosansLight opacity-60 mt-[40px] flex flex-col">
-            <span className="font-azosans">
-              A new digital economy is coming. People would be just as powerful
-              as countries and creators would be paid beyond the peanuts that
-              conventional social media platforms can offer.
-            </span>
-            <br />
-            There would be new markets and advertisers with little to offer
-            would not find home there. Like Kanye said, "Personalities would
-            become the new currency, and services would be built on top of
-            them". Well, Kanye didn't exactly say that, but it sounds like
-            something we hope he would say. <br />
-            <span className="mt-[15px]">
-              {" "}
-              Currency is digital, it has been that way for a while now, but
-              this time there would be no dead presidents on the money, there
-              would people like you on the money, and you would own it because
-              it would make the most sense in the world.
-            </span>
-          </p>
-        </div>
-        <div className="img-side">
-          <img
-            src="/3d-render-game-equipment-console-headset-free-png 2.png"
-            alt=""
-          />
-        </div>
-        <img
-          src="/Subtract.png"
-          alt=""
-          className="absolute hidden lg:block lg:top-[2460px] left-0 w-[-webkit-fill-available] -z-10"
-        />
-      </div>
+					<p className='text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-[#FFF] lg:text-[#191B21] font-azosansLight opacity-60 mt-[40px] flex flex-col'>
+						<span className='font-azosans'>
+							A new digital economy is coming. People would be just as powerful
+							as countries and creators would be paid beyond the peanuts that
+							conventional social media platforms can offer.
+						</span>
+						<br />
+						There would be new markets and advertisers with little to offer
+						would not find home there. Like Kanye said, "Personalities would
+						become the new currency, and services would be built on top of
+						them". Well, Kanye didn't exactly say that, but it sounds like
+						something we hope he would say. <br />
+						<span className='mt-[15px]'>
+							{' '}
+							Currency is digital, it has been that way for a while now, but
+							this time there would be no dead presidents on the money, there
+							would people like you on the money, and you would own it because
+							it would make the most sense in the world.
+						</span>
+					</p>
+				</div>
+				<div className='img-side'>
+					<img
+						src='/3d-render-game-equipment-console-headset-free-png 2.png'
+						alt=''
+					/>
+				</div>
+				<img
+					src='/Subtract.png'
+					alt=''
+					className='absolute hidden lg:block lg:top-[2460px] left-0 w-[-webkit-fill-available] -z-10'
+				/>
+			</div>
 
 			{/* New block */}
 
@@ -160,25 +160,25 @@ const Web = () => {
 				</div>
 				<div className='tabs flex flex-col items-center gap-10'>
 					<div className='tab-- bg-white flex flex-row w-[100%] justify-between items-center rounded-[20px] p-[21px] max-w-[1300px]'>
-						<p className='font-inter font-bold text-[21px] sm:text-[23px] md:text-[25px] lg:text-[27px] text-[#1D1534]'>
+						<p className='font-inter font-bold text-[15px] sm:text-[20px] md:text-[25px] lg:text-[27px] text-[#1D1534]'>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit
 						</p>
 						<div className='div-bg hidden sm:block w-[47px] md:w-[56px] h-[47px] md:h-[56px] rounded-full'></div>
 					</div>
 					<div className='tab-- bg-white flex flex-row w-[100%] justify-between items-center rounded-[20px] p-[21px] max-w-[1300px]'>
-						<p className='font-inter font-bold text-[21px] sm:text-[23px] md:text-[25px] lg:text-[27px] text-[#1D1534]'>
+						<p className='font-inter font-bold text-[15px] sm:text-[20px] md:text-[25px] lg:text-[27px] text-[#1D1534]'>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit
 						</p>
 						<div className='div-bg hidden sm:block w-[47px] md:w-[56px] h-[47px] md:h-[56px] rounded-full'></div>
 					</div>
 					<div className='tab-- bg-white flex flex-row w-[100%] justify-between items-center rounded-[20px] p-[21px] max-w-[1300px]'>
-						<p className='font-inter font-bold text-[21px] sm:text-[23px] md:text-[25px] lg:text-[27px] text-[#1D1534]'>
+						<p className='font-inter font-bold text-[15px] sm:text-[20px] md:text-[25px] lg:text-[27px] text-[#1D1534]'>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit
 						</p>
 						<div className='div-bg hidden sm:block w-[47px] md:w-[56px] h-[47px] md:h-[56px] rounded-full'></div>
 					</div>
 					<div className='tab-- bg-white flex flex-row w-[100%] justify-between items-center rounded-[20px] p-[21px] max-w-[1300px]'>
-						<p className='font-inter font-bold text-[21px] sm:text-[23px] md:text-[25px] lg:text-[27px] text-[#1D1534]'>
+						<p className='font-inter font-bold text-[15px] sm:text-[20px] md:text-[25px] lg:text-[27px] text-[#1D1534]'>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit
 						</p>
 						<div className='div-bg hidden sm:block w-[47px] md:w-[56px] h-[47px] md:h-[56px] rounded-full'></div>
@@ -288,18 +288,18 @@ const Web = () => {
 				</div>
 			</div>
 
-			<div className='cards-blog min-[1000px]:mt-[800px] min-[1024px]:mt-[1300px] min-[1440px]:mt-[650px] min-[1200px]:mt-[680px] min-[1250px]:mt-[600px] min-[1366px]:mt-[250px] min-[1380px]:mt-[250px] min-[1425px]:mt-[150px] min-[1400px]:mt-[720px] min-[1450px]:mt-[150px] min-[1500px]:mt-[150px] min-[1540px]:mt-[50px] min-[1280px]:mt-[370px] min-[1600px]:mt-[50px] min-[1900px]:mt-[200px] min-[2560px]:mt-[400px] min-[2086px]:mt-[200px] min-[1365px]:mt-[55%] min-[1424px]:mt-[46%] 2xl:mt-[450px] h-screen mt-[600px]'>
+			<div className='cards-blog mt-[900px] lg:mt-[250px] xl:mt-[150px] 2xl:mt-[450px] h-screen'>
 				<div className='flex flex-col justify-center items-center h-full'>
-					<div className='top-texts'>
-						<h3 className='text-[40px] text-center font-inter font-bold text-[#191B21] '>
+					<div className='text-center'>
+						<h3 className='text-xl md:text-4xl font-inter font-bold text-white md:text-[#191B21]'>
 							Lorem ipsum dolor sit amet
 						</h3>
-						<p className='text-[15px] text-center font-medium font-inter text-[#191B21] mt-[50px]'>
+						<p className='text-sm md:text-base font-medium font-inter text-white md:text-[#191B21] mt-5 md:mt-12 max-w-2xl mx-auto'>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 							eiusmod tempor incididunt ut labore et dolore magna
 						</p>
 					</div>
-					<div className='btm-cards flex flex-wrap justify-center xl:flex-nowrap flex-row gap-[22px] mt-[90px]'>
+					<div className='flex flex-wrap justify-center xl:flex-nowrap gap-5 mt-20 z-10'>
 						<CardHomeBlog />
 						<CardHomeBlog />
 						<CardHomeBlog />
@@ -310,7 +310,7 @@ const Web = () => {
 				<img
 					src='../public/Subtract2.png'
 					alt=''
-					className='absolute min-[900px]:top-[7800px] max-[768px]:mt-[-2100px] min-[770px]:top-[7100px] min-[840px]:top-[7770px] md:top-[8000px] lg:top-[7755px] xl:top-[6700px] left-0 w-[-webkit-fill-available] -z-10'
+					className='absolute top-[7800px] md:top-[9200px] lg:top-[7755px] xl:top-[6700px] left-0 w-full -z-10 hidden md:block'
 				/>
 			</div>
 		</div>

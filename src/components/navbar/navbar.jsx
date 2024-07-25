@@ -50,7 +50,7 @@ const Navbar = () => {
 
 	return (
 		<div
-			className={`navbar flex flex-row fixed justify-between items-center w-full top-0 px-8 sm:px-10 md:px-12 py-[16px] ${
+			className={`navbar flex flex-row fixed justify-between items-center w-full left-0 top-0 px-8 sm:px-10 md:px-12 py-[16px] ${
 				scrolled ? 'backdrop-blur-lg bg-opacity-30 bg-gray-800' : ''
 			}`}
 		>
