@@ -89,7 +89,7 @@ const Navbar = () => {
 						Наша команда
 					</p>
 				</div>
-				<div className='lkm relative'>
+				<div className='lkm relative hidden md:block'>
 					<p className='text-[14px] md:text-[15px] text-[#FFFFFF] font-inter cursor-pointer hover:opacity-60 transition-all'>
 						Войти
 					</p>
