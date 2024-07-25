@@ -1,5 +1,5 @@
 import Card from "./components/card/card";
-// import CardHomeBlog from "./components/cardHomeBlog/cardHomeBlog";
+import CardHomeBlog from "./components/cardHomeBlog/cardHomeBlog";
 import ShortPage from "./components/short-page/shortPage";
 
 const Web = () => {
@@ -288,15 +288,15 @@ const Web = () => {
         </div>
       </div>
 
-      {/* <div className="cards-blog">
+      <div className="cards-blog mt-[65%] min-[1350px]:mt-[55%] min-[1424px]:mt-[46%] 2xl:mt-[450px]">
         <div className="top-texts">
-          <h3 className="text-[40px] font-inter font-bold text-[#191B21] ">Lorem ipsum dolor sit amet</h3>
-          <p className="text-[15px] font-medium font-inter text-[#191B21]">
+          <h3 className="text-[40px] text-center font-inter font-bold text-[#191B21] ">Lorem ipsum dolor sit amet</h3>
+          <p className="text-[15px] text-center font-medium font-inter text-[#191B21] mt-[50px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna
           </p>
         </div>
-        <div className="btm-cards">
+        <div className="btm-cards flex flex-wrap xl:flex-nowrap flex-row gap-[22px] mt-[90px]">
           <CardHomeBlog />
           <CardHomeBlog />
           <CardHomeBlog />
@@ -305,9 +305,9 @@ const Web = () => {
         <img
           src="../public/Subtract2.png"
           alt=""
-          className="absolute hidden lg:block lg:top-[6700px] left-0 w-[-webkit-fill-available] -z-10"
+          className="absolute hidden lg:block lg:top-[7755px] xl:top-[6700px] left-0 w-[-webkit-fill-available] -z-10"
         />
-      </div> */}
+      </div>
     </div>
   );
 };
