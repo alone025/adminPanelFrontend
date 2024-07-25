@@ -80,7 +80,7 @@ const Web = () => {
           <img
             src="/Frame 268.png"
             alt=""
-            className="absolute hidden md:block md:top-[2380px] lg:top-[1500px] left-0 w-[-webkit-fill-available] -z-10"
+            className="absolute hidden md:block md:top-[2100px] lg:top-[1500px] left-0 w-[-webkit-fill-available] -z-10"
           />
         </div>
       </div>

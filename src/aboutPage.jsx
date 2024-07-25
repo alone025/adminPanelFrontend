@@ -33,7 +33,7 @@ const AboutPage = () => {
 	}
 
 	const buttonAnimation = {
-		hover: { scale: 1.1, transition: { yoyo: Infinity, duration: 0.3 } },
+		hover: { scale: 1.05, transition: { yoyo: Infinity, duration: 0.3 } },
 	}
 
 	useEffect(() => {
@@ -54,133 +54,141 @@ const AboutPage = () => {
 
 	return (
 		<>
-			<img
-				src='/public/about_bg.svg'
-				alt='about background'
-				className='absolute top-0 left-0 w-full h-[55%] xl:h-auto object-cover z-[-1]'
-			/>
-			<div className='relative w-full flex flex-col lg:flex-row items-start px-4 sm:px-6 md:px-8 lg:px-12 font-inter'>
-				<motion.div
-					className='flex flex-col items-start max-w-4xl'
-					ref={aboutRef}
-					initial='hidden'
-					animate={aboutAnimationControls}
-					variants={aboutAnimation}
+			<div className=''>
+				<svg
+					className='absolute top-0 left-0 w-full h-auto z-[-1]'
+					viewBox='0 0 1440 800'
+					preserveAspectRatio='xMidYMid slice'
 				>
-					<motion.div
-						className='flex items-center gap-3 mb-4 mt-6 md:mt-12'
-						variants={textAnimation}
-					>
-						<img src='/public/Liner.png' alt='line' className='w-2 md:w-3' />
-						<h2 className='text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight'>
-							Lorem ipsum dolor sit amet
-						</h2>
-					</motion.div>
-					<motion.p
-						className='text-gray-300 text-base md:text-lg lg:text-xl font-light mb-6 md:mb-8'
-						variants={textAnimation}
-					>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua. Consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.
-					</motion.p>
-					<div className='flex flex-wrap gap-4'>
-						<motion.button
-							className='bg-pink-600 hover:bg-pink-700 transition-colors duration-200 rounded-full text-white py-2 px-4 md:py-3 md:px-6'
-							whileHover='hover'
-							variants={buttonAnimation}
+					<path
+						fill='#032457'
+						d='M0,0 L1440,0 L1440,600 C1200,700 960,750 720,750 C480,750 240,700 0,600 Z'
+					/>
+				</svg>
+
+				<div className='container mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+					<div className='flex flex-col gap-[100px] lg:flex-row lg:items-start'>
+						<motion.div
+							className='flex flex-col mt-[100px] items-start max-w-2xl lg:max-w-3xl'
+							ref={aboutRef}
+							initial='hidden'
+							animate={aboutAnimationControls}
+							variants={aboutAnimation}
 						>
-							Кнопка номер 1
-						</motion.button>
-						<motion.button
-							className='bg-transparent border border-white hover:bg-white hover:text-black transition-colors duration-200 rounded-full text-white py-2 px-4 md:py-3 md:px-6'
-							whileHover='hover'
-							variants={buttonAnimation}
+							<motion.div
+								className='flex items-center gap-3 mb-4'
+								variants={textAnimation}
+							>
+								<img src='/public/Liner.png' alt='liner' />
+								<h2 className='text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight'>
+									Lorem ipsum dolor sit amet
+								</h2>
+							</motion.div>
+							<motion.p
+								className='text-gray-300 text-base md:text-lg lg:text-xl font-light mb-6 md:mb-8 max-w-[600px]'
+								variants={textAnimation}
+							>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+								labore et dolore magna aliqua.
+							</motion.p>
+							<div className='flex flex-wrap gap-4'>
+								<motion.button
+									className='bg-pink-600 hover:bg-pink-700 transition-colors duration-200 rounded-full text-white py-2 px-4 md:py-3 md:px-6'
+									whileHover='hover'
+									variants={buttonAnimation}
+								>
+									Кнопка номер 1
+								</motion.button>
+								<motion.button
+									className='bg-transparent border border-white hover:bg-white hover:text-black transition-colors duration-200 rounded-full text-white py-2 px-4 md:py-3 md:px-6'
+									whileHover='hover'
+									variants={buttonAnimation}
+								>
+									Кнопка номер 2
+								</motion.button>
+							</div>
+						</motion.div>
+
+						<div
+							className='blurBackground flex justify-center items-center'
+							ref={secondSectionRef}
+							initial='hidden'
+							animate={secondSectionAnimationControls}
+							variants={imageAnimation}
 						>
-							Кнопка номер 2
-						</motion.button>
+							<img
+								src='/public/about_home.png'
+								alt='home'
+								className='md:w-[400px]'
+							/>
+						</div>
 					</div>
-				</motion.div>
+				</div>
+
 				<motion.div
-					className='flex justify-center items-center w-full lg:w-1/2 mt-6 md:mt-8 lg:mt-0 blurBackground'
+					className='container mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-12 lg:mt-24'
 					ref={secondSectionRef}
 					initial='hidden'
 					animate={secondSectionAnimationControls}
-					variants={imageAnimation}
+					variants={aboutAnimation}
 				>
-					<img
-						src='/public/about_home.png'
-						alt='home'
-						className='w-full max-w-xs md:max-w-md lg:max-w-lg xl:max-w-xl lg:w-auto object-contain'
-					/>
-				</motion.div>
-			</div>
-
-			<motion.div
-				className='flex flex-col mt-[150px] lg:flex-row items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 gap-8 md:gap-12 lg:gap-[140px]'
-				ref={secondSectionRef}
-				initial='hidden'
-				animate={secondSectionAnimationControls}
-				variants={aboutAnimation}
-			>
-				<motion.div className='w-full flex justify-center lg:justify-start lg:w-[640px]' variants={imageAnimation}>
-					<img
-						src='/public/кот2.png'
-						alt='кот'
-						className='w-full max-w-[400px] lg:max-w-[640px]'
-					/>
-				</motion.div>
-				<motion.div className='flex flex-col items-start'>
-					<motion.div
-						className='flex items-center gap-2 md:gap-4'
-						variants={textAnimation}
-					>
-						<img
-							src='/public/about_label_icon.svg'
-							alt='icon'
-							className='w-6 md:w-8'
-						/>
-						<p className='font-popins text-lg md:text-xl'>About us</p>
-					</motion.div>
-					<motion.div variants={textAnimation}>
-						<h2 className='text-3xl md:text-4xl lg:text-[48px] font-semibold text-white mt-[15px]'>
-							Lorem ipsum dolor sit amet
-						</h2>
-						<p className='text-base md:text-lg lg:text-[20px] text-white w-full md:w-[680px] mt-[40px]'>
-							Carlio brand is one of the most reliable motor oil manufacturers,
-							which is engaged in the production of high-quality products with a
-							history of more than decades in the industry. In order to get more
-							information about other aspects and products of the Carlio brand,
-							you can use the following buttons:
-						</p>
-					</motion.div>
-					<div className='mt-8 flex flex-wrap gap-4 '>
-						<motion.button
-							className='bg-[#E61467] w-full md:w-[215px] h-[54px] rounded-full text-lg text-white'
-							whileHover='hover'
-							variants={buttonAnimation}
-						>
-							Кнопка номер 3
-						</motion.button>
-						<motion.button
-							className='bg-[#fff] w-full md:w-[215px] h-[54px] rounded-full text-lg text-[#032457]'
-							whileHover='hover'
-							variants={buttonAnimation}
-						>
-							Кнопка номер 4
-						</motion.button>
-						<motion.button
-							className='bg-transparent border border-[#FEFBFB] w-full md:w-[215px] h-[54px] rounded-full text-lg text-[#FEFBFB]'
-							whileHover='hover'
-							variants={buttonAnimation}
-						>
-							Кнопка номер 5
-						</motion.button>
+					<div className='flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12 lg:gap-24'>
+						<motion.div className='w-[226px] lg:w-1/2' variants={imageAnimation}>
+							<img src='/public/кот2.png' alt='кот' />
+						</motion.div>
+						<motion.div className='flex flex-col items-start w-full lg:w-1/2'>
+							<motion.div
+								className='flex items-center gap-2 md:gap-4'
+								variants={textAnimation}
+							>
+								<img src='/public/about_label_icon.svg' alt='label' />
+								<p className='font-popins text-lg md:text-xl'>About us</p>
+							</motion.div>
+							<motion.div variants={textAnimation}>
+								<h2 className='text-3xl md:text-4xl lg:text-[48px] font-semibold text-white mt-4'>
+									Lorem ipsum dolor sit amet
+								</h2>
+								<p className='text-base md:text-lg lg:text-[20px] text-white mt-6'>
+									Carlio brand is one of the most reliable motor oil
+									manufacturers, which is engaged in the production of
+									high-quality products with a history of more than decades in
+									the industry.
+								</p>
+							</motion.div>
+							<div className='mt-8 flex flex-wrap gap-3'>
+								<motion.button
+									className='bg-[#E61467] w-full sm:w-auto px-6 py-3 rounded-full text-lg text-white'
+									whileHover='hover'
+									variants={buttonAnimation}
+								>
+									Кнопка номер 3
+								</motion.button>
+								<motion.button
+									className='bg-[#fff] w-full sm:w-auto px-6 py-3 rounded-full text-lg text-[#032457]'
+									whileHover='hover'
+									variants={buttonAnimation}
+								>
+									Кнопка номер 4
+								</motion.button>
+								<motion.button
+									className='bg-transparent border border-[#FEFBFB] w-full sm:w-auto px-6 py-3 rounded-full text-lg text-[#FEFBFB]'
+									whileHover='hover'
+									variants={buttonAnimation}
+								>
+									Кнопка номер 5
+								</motion.button>
+							</div>
+						</motion.div>
 					</div>
 				</motion.div>
-			</motion.div>
+			</div>
+			<img
+				src='/public/about_bg.svg'
+				alt='bg'
+				className='absolute flex justify-center z-[-1] top-[0]'
+			/>
 		</>
 	)
 }

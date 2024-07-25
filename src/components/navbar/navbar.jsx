@@ -25,7 +25,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="navbar flex flex-row justify-between items-center  w-full px-8 sm:px-10 md:px-12 pt-[36px]">
+    <div className="navbar flex flex-row justify-between items-center w-full px-8 sm:px-10 md:px-12 pt-[36px]">
       <div className="logo-tab relative z-10">
         <h2 className="text-[25px] md:text-[29px] font-popins font-bold text-left text-[#FBF9ED]">
           LOGO
