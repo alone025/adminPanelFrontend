@@ -21,7 +21,7 @@ function App() {
 		<>
 			{loading ? (
 				<div className='flex justify-center items-center h-screen'>
-					<img src='/public/loading.png' alt='loading' className='loading-image jump  w-[300px]' />
+					<img src='/loading.png' alt='loading' className='loading-image jump  w-[300px]' />
 				</div>
 			) : (
 				<Router>
