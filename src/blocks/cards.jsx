@@ -56,7 +56,7 @@ function Cards() {
 	return (
 		<>
 			<Wrapper>
-				<div className='cards flex flex-col md:flex-row gap-5 mt-[60px] mx-[50px] 2xl:mx-0'>
+				<div className='cards flex flex-col md:flex-row gap-5 mt-[60px] mx-[20px] sm:mx-[30px] md:mx-[40px] lg:mx-[50px] 2xl:mx-0'>
 					<motion.div
 						ref={ref}
 						initial='hidden'

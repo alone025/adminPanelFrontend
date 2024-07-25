@@ -31,7 +31,7 @@ function Main() {
 		<>
 			<Wrapper>
 				<motion.div
-					className='bg-bop flex flex-col lg:flex-row mt-[50px] mx-[50px] 2xl:mx-0'
+					className='bg-bop flex flex-col lg:flex-row mt-[50px]  mx-[20px] sm:mx-[30px] md:mx-[40px] lg:mx-[50px] 2xl:mx-0'
 					ref={ref}
 					initial='hidden'
 					animate={inView ? 'visible' : 'hidden'}

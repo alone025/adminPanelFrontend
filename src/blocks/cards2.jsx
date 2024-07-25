@@ -6,7 +6,7 @@ function Cards2() {
 	return (
 		<>
 			<Wrapper>
-				<div className='different-cards mx-[50px] 2xl:mx-0 pt-[180px] 2xl:pt-0'>
+				<div className='different-cards mx-[20px] sm:mx-[30px] md:mx-[40px] lg:mx-[50px] 2xl:mx-0 pt-[180px] 2xl:pt-0'>
 					<div className='top-cards flex flex-col xl:flex-row gap-[42px]'>
 						<motion.div
 							initial={{ opacity: 0, y: 50 }}

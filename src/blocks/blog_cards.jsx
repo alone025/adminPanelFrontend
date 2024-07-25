@@ -18,13 +18,13 @@ function Blog_cards() {
 					className='absolute top-0 left-0 w-full 2xl:h-full -z-10 '
 				/>
 				<Wrapper>
-					<div className='flex flex-col justify-center items-center mx-[50px] 2xl:mx-0 2xl:h-screen'>
+					<div className='flex flex-col justify-center items-center mx-[20px] sm:mx-[30px] md:mx-[40px] lg:mx-[50px] 2xl:mx-0 2xl:h-screen'>
 						<motion.div
 							initial={{ opacity: 0, y: 50 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.6 }}
-							className='text-center mt-[250px]'
+							className='text-center mt-[150px] sm:mt-[200px] md:mt-[250px]'
 						>
 							<h3 className='text-xl md:text-4xl font-inter font-bold text-[#191B21]'>
 								Lorem ipsum dolor sit amet

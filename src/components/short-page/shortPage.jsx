@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import  { useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Wrapper from '../../layout/wrapper'
@@ -36,7 +36,7 @@ const ShortPage = () => {
 			</div>
 			<Wrapper>
 				<motion.div
-					className='flex flex-col lg:flex-row justify-around gap-12 lg:gap-16 xl:gap-20 mx-[50px] 2xl:mx-0'
+					className='flex flex-col lg:flex-row justify-around gap-12 lg:gap-16 xl:gap-20 mx-[20px] sm:mx-[30px] md:mx-[40px] lg:mx-[50px] 2xl:mx-0'
 					ref={ref}
 					initial='hidden'
 					animate={controls}
@@ -47,7 +47,7 @@ const ShortPage = () => {
 							Про платформу Urban Clans
 						</h3>
 					</div>
-					<div className='relative max-w-lg lg:max-w-xl xl:max-w-2xl'>
+					<div className='relative max-w-max lg:max-w-xl xl:max-w-2xl'>
 						<p className='text-sm sm:text-base md:text-lg xl:text-xl font-medium text-white opacity-60 mb-8'>
 							We would only launch tokens with the express permission of the
 							creators.

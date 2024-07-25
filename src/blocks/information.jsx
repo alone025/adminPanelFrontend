@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Wrapper from '../layout/wrapper'
@@ -54,7 +54,7 @@ function Information() {
 				/>
 			</div>
 			<Wrapper>
-				<div className='flex flex-col lg:flex-row justify-between items-center gap-[100px] mx-[50px] 2xl:mx-0'>
+				<div className='flex flex-col mt-[330px] lg:mt-[250px] xl:mt-[182px] lg:flex-row justify-between items-center gap-[45px] xl:gap-[100px] mx-[20px] sm:mx-[30px] md:mx-[40px] lg:mx-[50px] 2xl:mx-0'>
 					<div className=''>
 						<motion.h3
 							variants={itemVariants}

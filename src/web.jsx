@@ -4,7 +4,6 @@ import Cards2 from './blocks/cards2'
 import Details from './blocks/details'
 import Information from './blocks/information'
 import Main from './blocks/main'
-import CardHomeBlog from './components/cardHomeBlog/cardHomeBlog'
 import ShortPage from './components/short-page/shortPage'
 
 const Web = () => {

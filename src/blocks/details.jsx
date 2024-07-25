@@ -46,7 +46,7 @@ function Details() {
 			<img
 				src='/Frame new.png'
 				alt='Background'
-				className='absolute bottom-0 lg:top-[-25%] 2xl:top-[-30%] left-0 w-full 2xl:h-full -z-30'
+				className='absolute bottom-[35px] md:bottom-0 lg:top-[-25%] 2xl:top-[-30%] left-0 w-full h-[115%] 2xl:h-full -z-30'
 			/>
 			<Wrapper>
 				<motion.div
@@ -61,7 +61,7 @@ function Details() {
 					</h3>
 				</motion.div>
 
-				<div className='tabs flex flex-col items-center gap-10 mx-[50px] 2xl:mx-0'>
+				<div className='tabs flex flex-col items-center gap-10 mx-[20px] sm:mx-[30px] md:mx-[40px] lg:mx-[50px] 2xl:mx-0'>
 					{tabs.map(tab => (
 						<motion.div
 							key={tab.id}
