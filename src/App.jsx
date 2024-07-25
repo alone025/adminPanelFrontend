@@ -21,17 +21,7 @@ function App() {
 		<>
 			{loading ? (
 				<div className='flex justify-center items-center h-screen'>
-					{/* <div className='lds-roller'>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div> */}
-					<img src="/public/loading.png" alt="loading" className='w-[300px]' />
+					<img src='/public/loading.png' alt='loading' className='loading-image jump  w-[300px]' />
 				</div>
 			) : (
 				<Router>
