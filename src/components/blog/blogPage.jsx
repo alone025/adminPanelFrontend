@@ -47,13 +47,13 @@ function BlogPage() {
 								animate={controls1}
 								transition={{ duration: 0.8 }}
 							>
-								<p className='text-start max-w-[1632px] text-white text-[20px] md:text-[32px] font-[500] font-inter relative z-10 mx-[10px] lg:mx-0'>
+								<p className='text-start max-w-[1632px] text-white text-[20px] md:text-[32px] font-[500] font-inter relative z-[1] mx-[10px] lg:mx-0'>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 									do eiusmod tempor incididunt ut labore et dolore magna aliqua
 									consectetur adipiscing elit
 								</p>
 								<div className='absolute blog_blur'></div>
-								<div className='relative mx-[5px] md:mx-[40px] bg-[#032457] py-[20px] xl:py-0 max-w-[1491px] xl:h-[467px] rounded-[30px] mt-[61px] z-[50]'>
+								<div className='relative mx-[5px] md:mx-[40px] bg-[#032457] py-[20px] xl:py-0 max-w-[1491px] xl:h-[467px] rounded-[30px] mt-[61px] z-[1]'>
 									<div className='flex flex-col xl:flex-row justify-center items-center h-full gap-[20px] xl:px-[100px]'>
 										<div className='flex flex-col items-start gap-[80px] h-full justify-center'>
 											<p className='text-[18px] sm:text-[20px] md:text-[25px] mx-[30px] text-white leading-[35px] max-w-[668px]'>

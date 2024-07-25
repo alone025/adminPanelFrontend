@@ -67,7 +67,7 @@ const Navbar = () => {
 							animate={{ x: 0 }}
 							exit={{ x: '-100%' }}
 							transition={{ duration: 0.3 }}
-							className='navigations flex fixed left-0 top-0 bg-blue-500 w-full h-screen flex-col z-[888] justify-center items-center gap-10'
+							className='navigations flex fixed left-0 top-0 bg-blue-500 w-full h-screen flex-col z-[999] justify-center items-center gap-10'
 						>
 							<p className='text-[14px] md:text-[15px] text-[#FFFFFF] font-inter cursor-pointer hover:opacity-60 transition-all'>
 								О Проекте
