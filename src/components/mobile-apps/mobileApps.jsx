@@ -4,7 +4,7 @@ import Wrapper from "../../layout/wrapper"
 const MobileApps = () => {
   return (
   <Wrapper>
-     <div className="mobile-apps mt-[120px] lg:mt-[88px] px-2">
+     <div className="mobile-apps mt-[180px] lg:mt-[258px] px-2">
     <div className="title">
       <h3 className="text-[22px] sm:text-[26px] md:text-[30px] lg:text-[34px] font-inter font-bold text-[#fff] text-center">Наше мобильное приложение скоро</h3>
     </div>

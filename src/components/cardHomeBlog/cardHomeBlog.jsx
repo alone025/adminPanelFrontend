@@ -1,7 +1,7 @@
 const CardHomeBlog = () => {
 	return (
 		<div className='card-content relative max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[360px] justify-center xl:justify-normal xl:max-w-max max-h-[480px] sm:max-h-[550px] md:max-h-[610px] z-[10]'>
-			<div className='img absolute top-0 left-0 h-full w-full bg-[#C4D3EA] rounded-[17px] -z-[1]'></div>
+			<img src="../../../public/Frame 267.png" className='img absolute top-0 left-0 h-full w-full bg-[#C4D3EA] rounded-[17px] -z-[1]'></img>
 			<div className='btm rounded-[17px] bgh min-h-[400px] sm:min-h-[440px] md:min-h-[460px] flex flex-col justify-end p-[18px] sm:p-[22px] md:p-[26px]'>
 				<h4 className='text-[15px] sm:text-[17px] md:text-[20px] lg:text-[32px] font-inter font-bold text-[#fff]'>
 					Клан 1
