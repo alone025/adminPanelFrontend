@@ -19,7 +19,7 @@ function Ourteam() {
 	return (
 		<div className='relative w-full min-h-screen'>
 			<img
-				src='/public/ourteam.svg'
+				src='/ourteam.svg'
 				alt='ourteam'
 				className='absolute w-full z-[-1]'
 			/>
