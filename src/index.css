@@ -65,9 +65,13 @@ body {
 	);
 }
 
-@media screen and (max-width:1104px) {
-	.bgh{
-		background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0.16%, #093578 65.71%);
+@media screen and (max-width: 1104px) {
+	.bgh {
+		background: linear-gradient(
+			180deg,
+			rgba(217, 217, 217, 0) 0.16%,
+			#093578 65.71%
+		);
 	}
 }
 
@@ -140,4 +144,9 @@ body {
 	background-color: white;
 	width: 5px;
 	border-radius: 100px;
+}
+
+.ourteam_div_bg {
+	border-radius: 8px;
+	background: rgba(4, 36, 88, 0.13);
 }

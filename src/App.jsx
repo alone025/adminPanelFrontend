@@ -6,6 +6,7 @@ import Footer from './components/footer/footer'
 import AboutPage from './aboutPage'
 import BlogPage from './components/blog/blogPage'
 import { useEffect, useState } from 'react'
+import Ourteam from './components/our-team/ourteam'
 
 function App() {
 	const [loading, setLoading] = useState(true)
@@ -21,7 +22,11 @@ function App() {
 		<>
 			{loading ? (
 				<div className='flex justify-center items-center h-screen'>
-					<img src='/loading.png' alt='loading' className='loading-image jump  w-[300px]' />
+					<img
+						src='/loading.png'
+						alt='loading'
+						className='loading-image jump  w-[300px]'
+					/>
 				</div>
 			) : (
 				<Router>
@@ -30,6 +35,7 @@ function App() {
 						<Route path='/' element={<Web />} />
 						<Route path='/aboutcompany' element={<AboutPage />} />
 						<Route path='/blog' element={<BlogPage />} />
+						<Route path='ourteam' element={<Ourteam />} />
 					</Routes>
 					<Footer />
 				</Router>
