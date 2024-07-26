@@ -34,12 +34,13 @@ const CardHomeBlog = () => {
 				{modal && (
 					<motion.div
 						className='z-[1000] left-0 top-0 right-0 bottom-0 w-screen h-screen inset-0 bg-[#00000099] fixed flex justify-center items-center font-inter px-[20px]'
+						onClick={handleOpenModal}
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
 					>
 						<motion.div
-							className='w-[1130px] xl:h-[530px] 2xl:h-[630px] relative flex flex-col md:flex-row  justify-center items-center bg-white overflow-hidden rounded-[40px] z-[1000]'
+							className='w-full max-w-[1130px] xl:h-auto 2xl:h-auto relative flex flex-col md:flex-row justify-center items-center bg-white overflow-hidden rounded-[40px] z-[1000]'
 							initial={{ scale: 0.5, opacity: 0 }}
 							animate={{ scale: 1, opacity: 1 }}
 							exit={{ scale: 0.5, opacity: 0 }}
@@ -52,7 +53,7 @@ const CardHomeBlog = () => {
 								onClick={handleOpenModal}
 							/>
 							<motion.div
-								className='w-full md:w-1/2 z-[2000]'
+								className='w-full md:w-1/2 z-[2000] pr-4 md:pr-6'
 								initial={{ x: -50, opacity: 0 }}
 								animate={{ x: 0, opacity: 1 }}
 								transition={{ delay: 0.2 }}
@@ -64,26 +65,26 @@ const CardHomeBlog = () => {
 								/>
 							</motion.div>
 							<motion.div
-								className='w-full md:w-1/2 p-6 flex justify-center flex-col'
+								className='w-full md:w-1/2 pr-4 md:pr-6 flex justify-center flex-col'
 								initial={{ x: 50, opacity: 0 }}
 								animate={{ x: 0, opacity: 1 }}
 								transition={{ delay: 0.3 }}
 							>
-								<h2 className='text-[48px] mb-4 text-[#032457] font-[700] text-center'>
+								<h2 className='text-[32px] sm:text-[40px] md:text-[48px] mb-4 text-[#032457] font-[700] text-center'>
 									Клан мафии
 								</h2>
-								<div className='flex flex-col gap-[12px]'>
+								<div className='flex flex-col gap-[12px] text-sm md:text-base'>
 									<p className='text-[#032457]'>
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 										do eiusmod tempor
 									</p>
-									<p className='text-[16px] text-[#191B21]'>
+									<p className='text-[#191B21]'>
 										There are several thousand celebrities and creators on
 										twitter, tiktok, Instagram and YouTube with followings in
 										the millions who we would be actively engaging before we go
 										viral.
 									</p>
-									<p className='text-[16px] text-[#191B21]'>
+									<p className='text-[#191B21]'>
 										We would get them on our platform and they would see the
 										opportunity to create a fan driven digital economy where
 										their digital content can be traded as NFTs and their most
