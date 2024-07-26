@@ -25,7 +25,7 @@ function Ourteam() {
 			/>
 			<Wrapper>
 				<div className='pt-[100px] mx-[50px] 2xl:mx-0 font-inter'>
-					<div className='blog_blur'></div>
+					<div className='blog_blur right-0 w-[!1000px]'></div>
 					<motion.div
 						ref={ref}
 						initial={{ opacity: 0, y: 50 }}
@@ -52,7 +52,7 @@ function Ourteam() {
 						{team.map((teamData, index) => (
 							<motion.div
 								key={index}
-								className='bg-[white] rounded-[17px]'
+								className='bg-[white] rounded-[17px] z-[2]'
 								initial={{ opacity: 0, y: 50 }}
 								animate={controls}
 								transition={{ duration: 0.8, delay: index * 0.2 }}
@@ -69,6 +69,36 @@ function Ourteam() {
 										<p className='text-[14px] md:text-[16px] text-[#6B7280]'>
 											{teamData.desc}
 										</p>
+										<div className='flex items-center gap-[12px] mt-[5px]'>
+											<a href='#'>
+												<img
+													src='/facebook.svg'
+													alt='facebook'
+													className='cursor-pointer'
+												/>
+											</a>
+											<a href='#'>
+												<img
+													src='/twiter.svg'
+													alt='twiter'
+													className='cursor-pointer'
+												/>
+											</a>
+											<a href='#'>
+												<img
+													src='/dribble.svg'
+													alt='dribble'
+													className='cursor-pointer'
+												/>
+											</a>
+											<a href='#'>
+												<img
+													src='/github.svg'
+													alt='github'
+													className='cursor-pointer'
+												/>
+											</a>
+										</div>
 									</div>
 								</div>
 							</motion.div>
