@@ -46,7 +46,7 @@ function Details() {
 			<img
 				src='/Frame new.png'
 				alt='Background'
-				className='absolute bottom-[35px] md:bottom-0 lg:top-[-25%] 2xl:top-[-30%] left-0 w-full h-[115%] 2xl:h-full -z-30'
+				className='absolute bottom-[-50px] md:bottom-0 lg:top-[-25%] 2xl:top-[-30%] left-0 w-full h-[115%] 2xl:h-full -z-30'
 			/>
 			<Wrapper>
 				<motion.div
@@ -114,7 +114,7 @@ function Details() {
 					<h4 className='text-[30px] sm:text-[32px] md:text-[34px] lg:text-[36px] text-center font-azosans text-[#F7F5F9] font-medium'>
 						How to buy
 					</h4>
-					<ul className='mt-[30px] flex flex-col gap-[30px]'>
+					<ul className='mt-[30px] flex flex-col gap-[30px] mx-[50px] md:mx-0'>
 						<li className='text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] font-azosansLight text-[#FFF] text-center'>
 							First Connect your Metamask or TrustWallet to the "Connect Wallet"
 							on the Homepage.
