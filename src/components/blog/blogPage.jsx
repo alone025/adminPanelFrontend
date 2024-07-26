@@ -87,7 +87,7 @@ function BlogPage() {
 									do eiusmod tempor incididunt ut labore et dolore magna aliqua
 									consectetur adipiscing elit
 								</p>
-								<div className='mx-[40px]'>
+								<div className='mx-[5px] md:mx-[40px]'>
 									<img
 										src='/blog_2.png'
 										alt='blog'
