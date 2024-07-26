@@ -7,6 +7,7 @@ import AboutPage from './aboutPage'
 import BlogPage from './components/blog/blogPage'
 import { useEffect, useState } from 'react'
 import Ourteam from './components/our-team/ourteam'
+import ScrollToTop from './ScrollToTop'
 
 function App() {
 	const [loading, setLoading] = useState(true)
@@ -30,12 +31,13 @@ function App() {
 				</div>
 			) : (
 				<Router>
+					<ScrollToTop />
 					<Navbar />
 					<Routes>
 						<Route path='/' element={<Web />} />
 						<Route path='/aboutcompany' element={<AboutPage />} />
 						<Route path='/blog' element={<BlogPage />} />
-						<Route path='ourteam' element={<Ourteam />} />
+						<Route path='/ourteam' element={<Ourteam />} />
 					</Routes>
 					<Footer />
 				</Router>
