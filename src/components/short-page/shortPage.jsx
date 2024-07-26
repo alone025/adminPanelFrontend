@@ -27,11 +27,11 @@ const ShortPage = () => {
 
 	return (
 		<div className='relative'>
-			<div className='absolute inset-0 w-full min-h-screen -z-10'>
+			<div className='absolute inset-0 w-full min-h-screen md:min-h-0 -z-10'>
 				<img
 					src='/Frame 268.png'
 					alt='Background'
-					className='absolute bottom-0 left-0 h-full md:h-auto w-full'
+					className='absolute bottom-[-100%] lg:bottom-[-80%] xl:bottom-[-90%] 2xl:bottom-[-140%] left-0 h-full md:h-auto w-full'
 				/>
 			</div>
 			<Wrapper>

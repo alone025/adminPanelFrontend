@@ -40,7 +40,7 @@ const CardHomeBlog = () => {
 						exit={{ opacity: 0 }}
 					>
 						<motion.div
-							className='w-full max-w-[1130px] xl:h-auto 2xl:h-auto relative flex flex-col md:flex-row justify-center items-center bg-white overflow-hidden rounded-[40px] z-[1000]'
+							className='w-full max-w-[1130px] xl:h-auto 2xl:h-auto relative flex flex-col md:flex-row justify-center items-center bg-white overflow-hidden rounded-[60px] z-[1000]'
 							initial={{ scale: 0.5, opacity: 0 }}
 							animate={{ scale: 1, opacity: 1 }}
 							exit={{ scale: 0.5, opacity: 0 }}
@@ -49,7 +49,7 @@ const CardHomeBlog = () => {
 							<img
 								src='/close.png'
 								alt='close'
-								className='absolute right-6 top-6 cursor-pointer'
+								className='absolute right-8 top-8 cursor-pointer'
 								onClick={handleOpenModal}
 							/>
 							<motion.div
