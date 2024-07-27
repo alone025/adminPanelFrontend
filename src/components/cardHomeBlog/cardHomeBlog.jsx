@@ -1,26 +1,27 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 
-const CardHomeBlog = () => {
+const CardHomeBlog = ({ cardData }) => {
 	const [modal, setModal] = useState(false)
 
 	const handleOpenModal = () => {
 		setModal(!modal)
 	}
+
 	return (
 		<>
 			<div className='card-content relative max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[360px] justify-center xl:justify-normal xl:max-w-max max-h-[480px] sm:max-h-[550px] md:max-h-[610px] z-[10]'>
 				<img
-					src='/Frame 267.png'
+					src={cardData.teamCardImage1 || '/Frame 267.png'}
 					className='img absolute top-0 left-0 h-full w-full bg-[#C4D3EA] rounded-[17px] -z-[1]'
-				></img>
+					alt={cardData.teamCardArticle1}
+				/>
 				<div className='btm rounded-[17px] bgh min-h-[400px] sm:min-h-[440px] md:min-h-[460px] flex flex-col justify-end p-[18px] sm:p-[22px] md:p-[26px]'>
 					<h4 className='text-[15px] sm:text-[17px] md:text-[20px] lg:text-[32px] font-inter font-bold text-[#fff]'>
-						Клан 1
+						{cardData.teamCardArticle1}
 					</h4>
 					<p className='text-[12px] sm:text-[13px] lg:text-[14px] mt-[22px] font-inter font-[400] text-[#fff]'>
-						Lorem ipsum dolor sit amet, consec adipiscing elit, sed consec
-						adipiscing elit, sed consec adipiscing elit, sed{' '}
+						{cardData.teamCardShortDesc1}
 					</p>
 					<button
 						className='rounded-[52px] mt-4 bg-[#E61467] hover:text-[#E61467] transition-all hover:bg-transparent hover:border hover:border-[#E61467] hover:py-[8px] py-[9px] text-[13px] md:text-[14px] font-inter font-[600] text-[#fff]'
@@ -40,7 +41,7 @@ const CardHomeBlog = () => {
 						exit={{ opacity: 0 }}
 					>
 						<motion.div
-							className='w-full max-w-[1130px] xl:h-auto 2xl:h-auto relative flex flex-col md:flex-row justify-center items-center bg-white overflow-hidden rounded-[60px] z-[1000]'
+							className='w-full max-w-[1130px] h-[500px] relative flex flex-col md:flex-row justify-center items-center bg-white overflow-hidden rounded-[60px] z-[2000]'
 							initial={{ scale: 0.5, opacity: 0 }}
 							animate={{ scale: 1, opacity: 1 }}
 							exit={{ scale: 0.5, opacity: 0 }}
@@ -59,7 +60,7 @@ const CardHomeBlog = () => {
 								transition={{ delay: 0.2 }}
 							>
 								<img
-									src='/modal_pic.png'
+									src={cardData.teamCardImage1 || '/modal_pic.png'}
 									alt='modal picture'
 									className='w-full h-auto'
 								/>
@@ -71,28 +72,10 @@ const CardHomeBlog = () => {
 								transition={{ delay: 0.3 }}
 							>
 								<h2 className='text-[32px] sm:text-[40px] md:text-[48px] mb-4 text-[#032457] font-[700] text-center'>
-									Клан мафии
+									{cardData.teamCardArticle1}
 								</h2>
 								<div className='flex flex-col gap-[12px] text-sm md:text-base'>
-									<p className='text-[#032457]'>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-										do eiusmod tempor
-									</p>
-									<p className='text-[#191B21]'>
-										There are several thousand celebrities and creators on
-										twitter, tiktok, Instagram and YouTube with followings in
-										the millions who we would be actively engaging before we go
-										viral.
-									</p>
-									<p className='text-[#191B21]'>
-										We would get them on our platform and they would see the
-										opportunity to create a fan driven digital economy where
-										their digital content can be traded as NFTs and their most
-										loyal fans can have the monetary value of their creator's
-										currency increase significantly as they promote their
-										digital currency across their channels while our native
-										token holders benefit from the Tokners popularity.
-									</p>
+									<p className='text-[#032457]'>{cardData.teamCardBigDesc1}</p>
 								</div>
 							</motion.div>
 						</motion.div>

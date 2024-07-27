@@ -1,9 +1,11 @@
-import  { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Wrapper from '../../layout/wrapper'
 
 const ShortPage = () => {
+	const [shortPageData, setShortPageData] = useState(null)
+
 	const controls = useAnimation()
 	const { ref, inView } = useInView()
 
@@ -25,6 +27,19 @@ const ShortPage = () => {
 		},
 	}
 
+	useEffect(() => {
+		fetch('https://e334514e7b754cb9.mokky.dev/shortabout')
+			.then(response => response.json())
+			.then(data => {
+				setShortPageData(data[0])
+			})
+			.catch(error => {
+				console.error('Error:', error)
+			})
+	}, [])
+
+	if (!shortPageData) return <div>Loading...</div>
+
 	return (
 		<div className='relative'>
 			<div className='absolute inset-0 w-full min-h-screen md:min-h-0 -z-10'>
@@ -44,29 +59,18 @@ const ShortPage = () => {
 				>
 					<div className='max-w-lg'>
 						<h3 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white'>
-							Про платформу Urban Clans
+							{shortPageData.aboutBigText}
 						</h3>
 					</div>
 					<div className='relative max-w-max lg:max-w-xl xl:max-w-2xl'>
 						<p className='text-sm sm:text-base md:text-lg xl:text-xl font-medium text-white opacity-60 mb-8'>
-							We would only launch tokens with the express permission of the
-							creators.
+							{shortPageData.aboutShortText}
 						</p>
 						<p className='text-sm sm:text-base md:text-lg xl:text-xl font-light text-white opacity-60 mb-4'>
-							There are several thousand celebrities and creators on Twitter,
-							TikTok, Instagram, and YouTube with followings in the millions who
-							we would be
-							<span className='font-medium'> actively engaging</span> before we
-							go viral.
+							{shortPageData.aboutDescOneText}
 						</p>
 						<p className='text-sm sm:text-base md:text-lg xl:text-xl font-light text-white opacity-60'>
-							We would get them on our platform and they would see the
-							opportunity to create a fan-driven digital economy where their
-							digital content can be traded as NFTs and their most loyal fans
-							can have the monetary value of their creator's currency increase{' '}
-							<span className='font-medium'>significantly</span> as they promote
-							their digital currency across their channels while our native
-							token holders benefit from the token's popularity.
+							{shortPageData.aboutDescTwoText}
 						</p>
 					</div>
 				</motion.div>

@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
 const AboutPage = () => {
+	const [aboutData, setAboutData] = useState(null)
 	const { ref: aboutRef, inView: aboutInView } = useInView({
 		triggerOnce: true,
 	})
@@ -52,6 +53,19 @@ const AboutPage = () => {
 		}
 	}, [secondSectionInView, secondSectionAnimationControls])
 
+	useEffect(() => {
+		fetch('https://e334514e7b754cb9.mokky.dev/about')
+			.then(response => response.json())
+			.then(data => {
+				setAboutData(data[0])
+			})
+			.catch(error => {
+				console.error('Error:', error)
+			})
+	}, [])
+
+	if (!aboutData) return <div>Loading...</div>
+
 	return (
 		<>
 			<div className='relative pt-[50px] min-h-screen'>
@@ -75,17 +89,14 @@ const AboutPage = () => {
 							>
 								<img src='/Liner.png' alt='liner' />
 								<h2 className='text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight'>
-									Lorem ipsum dolor sit amet
+									{aboutData.firstAboutBigText}
 								</h2>
 							</motion.div>
 							<motion.p
 								className='text-gray-300 text-base md:text-lg lg:text-xl font-light mb-6 md:mb-8 max-w-[600px]'
 								variants={textAnimation}
 							>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua.
-								Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-								labore et dolore magna aliqua.
+								{aboutData.firstAboutSmallText}
 							</motion.p>
 							<div className='flex flex-wrap gap-4'>
 								<motion.button
@@ -93,14 +104,14 @@ const AboutPage = () => {
 									whileHover='hover'
 									variants={buttonAnimation}
 								>
-									Кнопка номер 1
+									{aboutData.firstAboutButtonText1}
 								</motion.button>
 								<motion.button
 									className='bg-transparent border border-white hover:bg-white hover:text-black transition-colors duration-200 rounded-full text-white py-2 px-4 md:py-3 md:px-6'
 									whileHover='hover'
 									variants={buttonAnimation}
 								>
-									Кнопка номер 2
+									{aboutData.firstAboutButtonText2}
 								</motion.button>
 							</div>
 						</motion.div>
@@ -112,7 +123,11 @@ const AboutPage = () => {
 							animate={secondSectionAnimationControls}
 							variants={imageAnimation}
 						>
-							<img src='/about_home.png' alt='home' className='md:w-[400px]' />
+							<img
+								src={aboutData.firstAboutImage}
+								alt='home'
+								className='md:w-[400px]'
+							/>
 						</motion.div>
 					</div>
 				</div>
@@ -129,7 +144,7 @@ const AboutPage = () => {
 							className='w-[226px] lg:w-1/2'
 							variants={imageAnimation}
 						>
-							<img src='/кот2.png' alt='кот' />
+							<img src={aboutData.secondAboutImage} alt='кот' />
 						</motion.div>
 						<motion.div className='flex flex-col items-start w-full lg:w-1/2'>
 							<motion.div
@@ -137,17 +152,16 @@ const AboutPage = () => {
 								variants={textAnimation}
 							>
 								<img src='/about_label_icon.svg' alt='label' />
-								<p className='font-popins text-lg md:text-xl'>About us</p>
+								<p className='font-popins text-lg md:text-xl'>
+									{aboutData.secondAboutLabel}
+								</p>
 							</motion.div>
 							<motion.div variants={textAnimation}>
 								<h2 className='text-3xl md:text-4xl lg:text-[48px] font-semibold text-white mt-4'>
-									Lorem ipsum dolor sit amet
+									{aboutData.secondAboutBigText}
 								</h2>
 								<p className='text-base md:text-lg lg:text-[20px] text-white mt-6'>
-									Carlio brand is one of the most reliable motor oil
-									manufacturers, which is engaged in the production of
-									high-quality products with a history of more than decades in
-									the industry.
+									{aboutData.secondAboutSmallText}
 								</p>
 							</motion.div>
 							<div className='mt-8 flex flex-wrap gap-3'>
@@ -156,21 +170,21 @@ const AboutPage = () => {
 									whileHover='hover'
 									variants={buttonAnimation}
 								>
-									Кнопка номер 3
+									{aboutData.secondAboutButton1Text}
 								</motion.button>
 								<motion.button
 									className='bg-[#fff] w-full sm:w-auto px-6 py-3 rounded-full text-lg text-[#032457]'
 									whileHover='hover'
 									variants={buttonAnimation}
 								>
-									Кнопка номер 4
+									{aboutData.secondAboutButton2Text}
 								</motion.button>
 								<motion.button
 									className='bg-transparent border border-[#FEFBFB] w-full sm:w-auto px-6 py-3 rounded-full text-lg text-[#FEFBFB]'
 									whileHover='hover'
 									variants={buttonAnimation}
 								>
-									Кнопка номер 5
+									{aboutData.secondAboutButton3Text}
 								</motion.button>
 							</div>
 						</motion.div>

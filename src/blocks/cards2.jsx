@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import Wrapper from '../layout/wrapper'
 
 function Cards2() {
+	const [cardData, setCardData] = useState(null)
+
+	useEffect(() => {
+		fetch('https://e334514e7b754cb9.mokky.dev/cardsheader')
+			.then(response => response.json())
+			.then(data => {
+				setCardData(data)
+				console.log(data)
+			})
+			.catch(error => {
+				console.error('Error:', error)
+			})
+	}, [])
+
+	if (!cardData) return <div>Loading...</div>
 	return (
 		<>
 			<Wrapper>

@@ -1,8 +1,11 @@
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 import Wrapper from '../layout/wrapper'
+import { useEffect, useState } from 'react'
 
 function Main() {
+	const [headerData, setHeaderData] = useState(null)
+
 	const [ref, inView] = useInView({
 		triggerOnce: true,
 		threshold: 0.1,
@@ -27,6 +30,20 @@ function Main() {
 			transition: { duration: 0.6, ease: 'easeOut' },
 		},
 	}
+
+	useEffect(() => {
+		fetch('https://e334514e7b754cb9.mokky.dev/header')
+			.then(response => response.json())
+			.then(data => {
+				setHeaderData(data[0])
+			})
+			.catch(error => {
+				console.error('Error:', error)
+			})
+	}, [])
+
+	if (!headerData) return <div>Loading...</div>
+
 	return (
 		<>
 			<Wrapper>
@@ -40,24 +57,17 @@ function Main() {
 					<div className='left-text max-w-[500px] xl:max-w-[610px] mt-[40px] md:mt-[80px] gap-[25px] flex flex-col'>
 						<motion.div className='smal' variants={itemVariants}>
 							<p className='font-azosans font-medium text-[#2278D4] text-[13px] sm:text-[14px] md:text-[15px] lg:text-[18px]'>
-								At Tokners are
+								{headerData.headerSmall}
 							</p>
 						</motion.div>
 						<motion.div className='big-text' variants={itemVariants}>
 							<h2 className='font-inter font-semibold text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40px] leading-[38px] sm:leading-[42px] md:leading-[48px] text-[#fff]'>
-								Lorem ipsum{' '}
-								<span className='text-[#E61467]'>dolor sit amet</span>{' '}
-								consectetur adipiscing elit, sed do eiusmod
+								{headerData.headerBig}
 							</h2>
 						</motion.div>
 						<motion.div className='desc' variants={itemVariants}>
 							<p className='text-[13px] sm:text-[14px] md:text-[15px] ld:text-[16px] leading-[30px] font-inter font-normal text-[#FFFFFF]'>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua
-								consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-								labore et dolore magna aliqua consectetur adipiscing elit, sed
-								do eiusmod tempor incididunt ut labore et dolore magna aliqua
-								consectetur adipiscing elit, sed do{' '}
+								{headerData.headerDesc}
 							</p>
 						</motion.div>
 						<motion.div
@@ -74,7 +84,7 @@ function Main() {
 					</div>
 					<motion.div className='right-picture flex items-center xl:block xl:items-baseline'>
 						<motion.img
-							src='/Frame 267.png'
+							src={'/Frame 267.png'}
 							alt=''
 							className='absolute w-[650px] lg:w-[800px] xl:w-[1000px] 2xl:w-auto -z-10 right-0 top-0'
 							initial={{ opacity: 0, scale: 0.8 }}
@@ -85,7 +95,7 @@ function Main() {
 						/>
 
 						<motion.img
-							src='/Component 1.png'
+							src={headerData.headerImg}
 							alt=''
 							initial={{ opacity: 0, y: 50 }}
 							animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
