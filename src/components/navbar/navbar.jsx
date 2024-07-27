@@ -6,6 +6,10 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
 	const [navbarOpen, setNavbarOpen] = useState(false)
 	const [scrolled, setScrolled] = useState(false)
+	const [type, setType] = useState('')
+	const [textLogo, setTextLogo] = useState('')
+	const [imag, setImage] = useState('')
+
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -49,6 +53,15 @@ const Navbar = () => {
 		}
 	}, [])
 
+
+	useEffect(()=>{
+		const options = {method: 'GET', headers: {'User-Agent': 'insomnia/2023.5.8'}};
+
+		fetch('https://e334514e7b754cb9.mokky.dev/navbar', options).then(response => response.json())
+  .then(response => {console.log(response[0]), setType(response[0].type), setTextLogo(response[0].text_data), setImage(response[0].image)})
+  .catch(err => console.error(err));
+	},[])
+
 	return (
 		<div
 			className={`navbar flex flex-row fixed justify-between items-center w-full left-0 top-0 px-8 sm:px-10 md:px-12 py-[16px] z-[999] ${
@@ -57,9 +70,15 @@ const Navbar = () => {
 		>
 			<div className='logo-tab relative z-10'>
 				<Link to={"/"}>
-					<h2 className='text-[25px] md:text-[29px] font-popins font-bold text-left text-[#FBF9ED]'>
-						LOGO
+				{
+					type == "text" ? (
+						<h2 className='text-[25px] md:text-[29px] font-popins font-bold text-left text-[#FBF9ED]'>
+						{textLogo || "LOGO" } 
 					</h2>
+					): (
+						<img src={imag} alt="logo" className='w-[80px]' />
+					)
+				}
 				</Link>
 			</div>
 			<div className='options-tab flex flex-row gap-[34px] items-center'>

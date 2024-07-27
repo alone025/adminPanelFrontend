@@ -72,7 +72,7 @@ function Ourteam() {
 										<div className='flex items-center gap-[12px] mt-[5px]'>
 											<a href='#'>
 												<img
-													src='/facebook.svg'
+													src='/facebook2.svg'
 													alt='facebook'
 													className='cursor-pointer'
 												/>
@@ -93,7 +93,7 @@ function Ourteam() {
 											</a>
 											<a href='#'>
 												<img
-													src='/github.svg'
+													src='/github2.svg'
 													alt='github'
 													className='cursor-pointer'
 												/>
