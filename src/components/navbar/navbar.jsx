@@ -6,6 +6,9 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
 	const [navbarOpen, setNavbarOpen] = useState(false)
 	const [scrolled, setScrolled] = useState(false)
+	const [type, setType] = useState('')
+	const [textLogo, setTextLogo] = useState('')
+	const [imag, setImage] = useState('')
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -49,6 +52,23 @@ const Navbar = () => {
 		}
 	}, [])
 
+	useEffect(() => {
+		const options = {
+			method: 'GET',
+			headers: { 'User-Agent': 'insomnia/2023.5.8' },
+		}
+
+		fetch('https://e334514e7b754cb9.mokky.dev/navbar', options)
+			.then(response => response.json())
+			.then(response => {
+				console.log(response[0]),
+					setType(response[0].type),
+					setTextLogo(response[0].text_data),
+					setImage(response[0].image)
+			})
+			.catch(err => console.error(err))
+	}, [])
+
 	const handleOpenNav = () => {
 		setNavbarOpen(!navbarOpen)
 	}
@@ -61,9 +81,13 @@ const Navbar = () => {
 		>
 			<div className='logo-tab relative z-10'>
 				<Link to={'/'}>
-					<h2 className='text-[25px] md:text-[29px] font-popins font-bold text-left text-[#FBF9ED]'>
-						LOGO
-	 				</h2>
+					{type == 'text' ? (
+						<h2 className='text-[25px] md:text-[29px] font-popins font-bold text-left text-[#FBF9ED]'>
+							{textLogo || 'LOGO'}
+						</h2>
+					) : (
+						<img src={imag} alt='logo' className='w-[80px]' />
+					)}
 				</Link>
 			</div>
 			<div className='options-tab flex flex-row gap-[34px] items-center'>
@@ -104,7 +128,7 @@ const Navbar = () => {
 								className='bg-[#fff] rounded-[52px] font-inter py-[15px] px-[25px] text-[14px] md:text-[15px] text-[#6F0133] hover:text-[#fff] hover:bg-[#6F0133] transition-all font-[500]'
 								onClick={handleOpenNav}
 							>
-								Зарегестрироватся
+								Register
 							</button>
 						</motion.div>
 					)}
@@ -128,13 +152,13 @@ const Navbar = () => {
 				</div>
 				<div className='lkm relative hidden md:block'>
 					<p className='text-[14px] md:text-[15px] text-[#FFFFFF] font-inter cursor-pointer hover:opacity-60 transition-all'>
-						Войти
+						Login
 					</p>
 					<div className='line absolute h-[1px] w-full bg-[#FFFFFF] hover:opacity-60 transition-all'></div>
 				</div>
 				<div className='bn hidden sm:block relative'>
 					<button className='bg-[#fff] rounded-[52px] font-inter py-[15px] px-[25px] text-[14px] md:text-[15px] text-[#6F0133] hover:text-[#fff] hover:bg-[rgb(111,1,51)] transition-all font-[500]'>
-						Зарегестрироватся
+						Register
 					</button>
 				</div>
 				<div
