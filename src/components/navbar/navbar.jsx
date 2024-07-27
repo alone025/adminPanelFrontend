@@ -62,6 +62,11 @@ const Navbar = () => {
   .catch(err => console.error(err));
 	},[])
 
+
+	const handleOpenNav = () => {
+		setNavbarOpen(!navbarOpen)
+	}
+
 	return (
 		<div
 			className={`navbar flex flex-row fixed justify-between items-center w-full left-0 top-0 px-8 sm:px-10 md:px-12 py-[16px] z-[999] ${
@@ -69,6 +74,7 @@ const Navbar = () => {
 			}`}
 		>
 			<div className='logo-tab relative z-10'>
+
 				<Link to={"/"}>
 				{
 					type == "text" ? (
@@ -92,22 +98,34 @@ const Navbar = () => {
 							className='navigations flex fixed left-0 top-0 bg-blue-500 w-full h-screen flex-col z-50 justify-center items-center gap-10'
 						>
 							<Link to='/aboutcompany'>
-								<p className='text-[14px] md:text-[15px] text-[#FFFFFF] font-inter cursor-pointer hover:opacity-60 transition-all'>
+								<p
+									className='text-[14px] md:text-[15px] text-[#FFFFFF] font-inter cursor-pointer hover:opacity-60 transition-all'
+									onClick={handleOpenNav}
+								>
 									About company
 								</p>
 							</Link>
 							<Link to='/ourteam'>
-								<p className='text-[14px] md:text-[15px] text-[#FFFFFF] font-inter cursor-pointer hover:opacity-60 transition-all'>
+								<p
+									className='text-[14px] md:text-[15px] text-[#FFFFFF] font-inter cursor-pointer hover:opacity-60 transition-all'
+									onClick={handleOpenNav}
+								>
 									Our team
 								</p>
 							</Link>
 							<Link to='/blog'>
-								<p className='text-[14px] md:text-[15px] text-[#FFFFFF] font-inter cursor-pointer hover:opacity-60 transition-all'>
+								<p
+									className='text-[14px] md:text-[15px] text-[#FFFFFF] font-inter cursor-pointer hover:opacity-60 transition-all'
+									onClick={handleOpenNav}
+								>
 									Blog
 								</p>
 							</Link>
-							<button className='bg-[#fff] rounded-[52px] font-inter py-[15px] px-[25px] text-[14px] md:text-[15px] text-[#6F0133] hover:text-[#fff] hover:bg-[#6F0133] transition-all font-[500]'>
-								Зарегестрироватся
+							<button
+								className='bg-[#fff] rounded-[52px] font-inter py-[15px] px-[25px] text-[14px] md:text-[15px] text-[#6F0133] hover:text-[#fff] hover:bg-[#6F0133] transition-all font-[500]'
+								onClick={handleOpenNav}
+							>
+								Register
 							</button>
 						</motion.div>
 					)}
@@ -142,7 +160,7 @@ const Navbar = () => {
 				</div>
 				<div
 					className='mneu block md:hidden cursor-pointer relative z-[999]'
-					onClick={() => setNavbarOpen(!navbarOpen)}
+					onClick={handleOpenNav}
 				>
 					{navbarOpen ? (
 						<IoMdClose className='text-[25px] text-[#fff]' />

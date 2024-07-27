@@ -1,21 +1,9 @@
 import React from 'react'
 import Wrapper from '../../layout/wrapper'
 import team from '../../data/ourteamData'
-import { motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
 
 function Ourteam() {
-	const controls = useAnimation()
-	const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true })
-
-	React.useEffect(() => {
-		if (inView) {
-			controls.start({ opacity: 1, y: 0 })
-		} else {
-			controls.start({ opacity: 0, y: 50 })
-		}
-	}, [inView, controls])
-
 	return (
 		<div className='relative w-full min-h-screen'>
 			<img
@@ -27,10 +15,10 @@ function Ourteam() {
 				<div className='pt-[100px] mx-[50px] 2xl:mx-0 font-inter'>
 					<div className='blog_blur right-0 w-[!1000px]'></div>
 					<motion.div
-						ref={ref}
-						initial={{ opacity: 0, y: 50 }}
-						animate={controls}
-						transition={{ duration: 0.8 }}
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true, amount: 0.2 }}
+						transition={{ duration: 0.6 }}
 					>
 						<div className='flex flex-col gap-[10px] text-white'>
 							<h2 className='text-[20px] md:text-[36px] font-[800]'>
@@ -44,18 +32,19 @@ function Ourteam() {
 					</motion.div>
 					<motion.div
 						className='grid xl:grid-cols-4 grid-cols-1 md:grid-cols-2 gap-[32px] mt-[64px] lg:grid-cols-3'
-						ref={ref}
-						initial={{ opacity: 0, y: 50 }}
-						animate={controls}
-						transition={{ duration: 0.8 }}
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true, amount: 0.1 }}
+						transition={{ duration: 0.6, delay: 0.2 }}
 					>
 						{team.map((teamData, index) => (
 							<motion.div
 								key={index}
 								className='bg-[white] rounded-[17px] z-[2]'
-								initial={{ opacity: 0, y: 50 }}
-								animate={controls}
-								transition={{ duration: 0.8, delay: index * 0.2 }}
+								initial={{ opacity: 0, y: 20 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								viewport={{ once: true, amount: 0.1 }}
+								transition={{ duration: 0.6, delay: index * 0.1 }}
 							>
 								<div className='p-[16px]'>
 									<div className='ourteam_div_bg w-full flex justify-center items-center mx-auto h-[190px]'></div>
