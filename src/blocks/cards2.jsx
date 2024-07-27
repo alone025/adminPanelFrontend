@@ -10,7 +10,6 @@ function Cards2() {
 			.then(response => response.json())
 			.then(data => {
 				setCardData(data)
-				console.log(data)
 			})
 			.catch(error => {
 				console.error('Error:', error)

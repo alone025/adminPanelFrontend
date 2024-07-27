@@ -99,7 +99,7 @@ const Footer = () => {
 							<div className='social-links'>
 								<ul className='flex flex-row flex-wrap gap-[10px]'>
 									{data[3].social_links.map((c, ind) => (
-										<>
+										<div key={ind}>
 											{c.isTrue ? (
 												<Link key={ind} to={c.description}>
 													<li className='p-[15px] rounded-[24px] border-white border-opacity-5 border cursor-pointer'>
@@ -109,7 +109,7 @@ const Footer = () => {
 											) : (
 												<></>
 											)}
-										</>
+										</div>
 									))}
 								</ul>
 							</div>

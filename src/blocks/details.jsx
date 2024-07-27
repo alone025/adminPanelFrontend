@@ -15,7 +15,6 @@ function Details() {
 			.then(response => response.json())
 			.then(data => {
 				setDetailsData(data)
-				console.log(data);
 			})
 			.catch(error => {
 				console.error('Error:', error)

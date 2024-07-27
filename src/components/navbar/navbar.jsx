@@ -133,7 +133,7 @@ const Navbar = () => {
 					)}
 				</AnimatePresence>
 				<div className='hidden md:flex flex-row gap-8 lg:gap-10 items-center'>
-					<Link to='/'>
+					<Link to='/aboutcompany'>
 						<p className='text-[14px] md:text-[15px] text-[#FFFFFF] font-inter cursor-pointer hover:opacity-60 transition-all'>
 							About company
 						</p>
