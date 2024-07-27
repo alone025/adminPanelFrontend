@@ -63,7 +63,7 @@ const Navbar = () => {
 				<Link to={'/'}>
 					<h2 className='text-[25px] md:text-[29px] font-popins font-bold text-left text-[#FBF9ED]'>
 						LOGO
-					</h2>
+	 				</h2>
 				</Link>
 			</div>
 			<div className='options-tab flex flex-row gap-[34px] items-center'>

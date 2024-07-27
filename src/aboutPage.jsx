@@ -54,18 +54,12 @@ const AboutPage = () => {
 
 	return (
 		<>
-			<div className='pt-[50px]'>
-				<svg
-					className='absolute top-0 left-0 w-full h-auto z-[-1]'
-					viewBox='0 0 1440 800'
-					preserveAspectRatio='xMidYMid slice'
-				>
-					<path
-						fill='#032457'
-						d='M0,0 L1440,0 L1440,600 C1200,700 960,750 720,750 C480,750 240,700 0,600 Z'
-					/>
-				</svg>
-
+			<div className='relative pt-[50px] min-h-screen'>
+				<img
+					src='/about_bg.svg'
+					alt='bg'
+					className='absolute inset-0 w-full z-[-1]'
+				/>
 				<div className='container mx-auto px-4 sm:px-6 lg:px-8 py-12'>
 					<div className='flex flex-col gap-[100px] lg:flex-row lg:items-start'>
 						<motion.div
@@ -118,11 +112,7 @@ const AboutPage = () => {
 							animate={secondSectionAnimationControls}
 							variants={imageAnimation}
 						>
-							<img
-								src='/about_home.png'
-								alt='home'
-								className='md:w-[400px]'
-							/>
+							<img src='/about_home.png' alt='home' className='md:w-[400px]' />
 						</motion.div>
 					</div>
 				</div>
@@ -135,7 +125,10 @@ const AboutPage = () => {
 					variants={aboutAnimation}
 				>
 					<div className='flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12 lg:gap-24'>
-						<motion.div className='w-[226px] lg:w-1/2' variants={imageAnimation}>
+						<motion.div
+							className='w-[226px] lg:w-1/2'
+							variants={imageAnimation}
+						>
 							<img src='/кот2.png' alt='кот' />
 						</motion.div>
 						<motion.div className='flex flex-col items-start w-full lg:w-1/2'>
@@ -184,11 +177,6 @@ const AboutPage = () => {
 					</div>
 				</motion.div>
 			</div>
-			<img
-				src='/about_bg.svg'
-				alt='bg'
-				className='absolute flex justify-center z-[-1] top-[0]'
-			/>
 		</>
 	)
 }
