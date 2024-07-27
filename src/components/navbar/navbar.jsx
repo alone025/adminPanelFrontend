@@ -149,13 +149,13 @@ const Navbar = () => {
 				</div>
 				<div className='lkm relative hidden md:block'>
 					<p className='text-[14px] md:text-[15px] text-[#FFFFFF] font-inter cursor-pointer hover:opacity-60 transition-all'>
-						Войти
+						Login
 					</p>
 					<div className='line absolute h-[1px] w-full bg-[#FFFFFF] hover:opacity-60 transition-all'></div>
 				</div>
 				<div className='bn hidden sm:block relative'>
 					<button className='bg-[#fff] rounded-[52px] font-inter py-[15px] px-[25px] text-[14px] md:text-[15px] text-[#6F0133] hover:text-[#fff] hover:bg-[rgb(111,1,51)] transition-all font-[500]'>
-						Зарегестрироватся
+						Register
 					</button>
 				</div>
 				<div
