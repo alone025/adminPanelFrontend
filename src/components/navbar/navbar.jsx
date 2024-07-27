@@ -61,8 +61,7 @@ const Navbar = () => {
 		fetch('https://e334514e7b754cb9.mokky.dev/navbar', options)
 			.then(response => response.json())
 			.then(response => {
-				console.log(response[0]),
-					setType(response[0].type),
+				setType(response[0].type),
 					setTextLogo(response[0].text_data),
 					setImage(response[0].image)
 			})

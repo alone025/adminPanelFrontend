@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Wrapper from '../../layout/wrapper'
-import team from '../../data/ourteamData'
 import { motion } from 'framer-motion'
 
 function Ourteam() {
+	const [teamData, setTeamData] = useState({
+		firstBigText: '',
+		firstSmallText: '',
+		cards: [],
+	})
+
+	useEffect(() => {
+		fetch('https://e334514e7b754cb9.mokky.dev/our_team')
+			.then(response => response.json())
+			.then(data => {
+				setTeamData(data)
+				console.log(data)
+			})
+			.catch(error => {
+				console.error('Error:', error)
+			})
+	}, [])
+
 	return (
 		<div className='relative w-full min-h-screen'>
 			<img
@@ -22,11 +39,10 @@ function Ourteam() {
 					>
 						<div className='flex flex-col gap-[10px] text-white'>
 							<h2 className='text-[20px] md:text-[36px] font-[800]'>
-								Наша команда
+								{teamData.firstBigText}
 							</h2>
 							<p className='text-[16px] md:text-[20px]'>
-								Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-								vulputate libero et velit interdum, ac aliquet odio mattis.
+								{teamData.firstSmallText}
 							</p>
 						</div>
 					</motion.div>
@@ -37,7 +53,7 @@ function Ourteam() {
 						viewport={{ once: true, amount: 0.1 }}
 						transition={{ duration: 0.6, delay: 0.2 }}
 					>
-						{team.map((teamData, index) => (
+						{teamData.cards.map((teamMember, index) => (
 							<motion.div
 								key={index}
 								className='bg-[white] rounded-[17px] z-[2]'
@@ -50,37 +66,37 @@ function Ourteam() {
 									<div className='ourteam_div_bg w-full flex justify-center items-center mx-auto h-[190px]'></div>
 									<div className='flex flex-col gap-[10px]'>
 										<h2 className='pt-[24px] text-[20px] text-[#032457] font-[700]'>
-											{teamData.title}
+											{teamMember.title}
 										</h2>
 										<p className='text-[14px] md:text-[16px] text-[#6B7280]'>
-											{teamData.levelJob}
+											{teamMember.levelJob}
 										</p>
 										<p className='text-[14px] md:text-[16px] text-[#6B7280]'>
-											{teamData.desc}
+											{teamMember.desc}
 										</p>
 										<div className='flex items-center gap-[12px] mt-[5px]'>
-											<a href='#'>
+											<a href={teamMember.facebook}>
 												<img
 													src='/facebook2.svg'
 													alt='facebook'
 													className='cursor-pointer'
 												/>
 											</a>
-											<a href='#'>
+											<a href={teamMember.twitter}>
 												<img
 													src='/twiter.svg'
-													alt='twiter'
+													alt='twitter'
 													className='cursor-pointer'
 												/>
 											</a>
-											<a href='#'>
+											<a href={teamMember.dribble}>
 												<img
 													src='/dribble.svg'
 													alt='dribble'
 													className='cursor-pointer'
 												/>
 											</a>
-											<a href='#'>
+											<a href={teamMember.github}>
 												<img
 													src='/github2.svg'
 													alt='github'
