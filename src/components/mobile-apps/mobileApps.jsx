@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Wrapper from "../../layout/wrapper";
+import { Link } from "react-router-dom";
 
 const MobileApps = () => {
   const [appData, setAppData] = useState({
@@ -22,7 +23,6 @@ const MobileApps = () => {
       .then((response) => response.json())
       .then((data) => {
         setAppData(data[0] || appData);
-        console.log(data);
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -48,50 +48,57 @@ const MobileApps = () => {
           </p>
         </div>
         <div className="app-store flex flex-row flex-wrap gap-[24px] justify-center mt-[45px]">
-          {appData.appStore_shown && (
-            <div className="app-store-app bg-[#fff] pl-[15px] pr-[38px] py-[13px] rounded-[7px] flex flex-row items-center gap-[10px]">
-              <div className="lim">
-                <img src="/apple-logo (3) 1.png" alt="App Store" />
+          {appData.appStore_shown == "true" && (
+            <Link to={appData.appStore_url}>
+              <div className="app-store-app bg-[#fff] pl-[15px] pr-[38px] py-[13px] rounded-[7px] flex flex-row items-center gap-[10px]">
+                <div className="lim">
+                  <img src="/apple-logo (3) 1.png" alt="App Store" />
+                </div>
+                <div className="textim">
+                  <p className="text-[8px] text-[#000] font-inter font-medium">
+                    Доступно в
+                  </p>
+                  <h4 className="text-[16px] text-[#000] font-inter font-bold">
+                    App store
+                  </h4>
+                </div>
               </div>
-              <div className="textim">
-                <p className="text-[8px] text-[#000] font-inter font-medium">
-                  Доступно в
-                </p>
-                <h4 className="text-[16px] text-[#000] font-inter font-bold">
-                  App store
-                </h4>
-              </div>
-            </div>
+            </Link>
           )}
-          {appData.playMarket_shown && (
-            <div className="play-market bg-[#fff] pl-[15px] pr-[38px] py-[13px] rounded-[7px] flex flex-row items-center gap-[10px]">
-              <div className="lim">
-                <img src="/playstore 1.png" alt="Play Store" />
+          {appData.playMarket_shown == "true" && (
+            <Link to={appData.playMarket_url}>
+              <div className="play-market bg-[#fff] pl-[15px] pr-[38px] py-[13px] rounded-[7px] flex flex-row items-center gap-[10px]">
+                <div className="lim">
+                  <img src="/playstore 1.png" alt="Play Store" />
+                </div>
+                <div className="textim">
+                  <p className="text-[8px] text-[#000] font-inter font-medium">
+                    Доступно в
+                  </p>
+                  <h4 className="text-[16px] text-[#000] font-inter font-bold">
+                    Play store
+                  </h4>
+                </div>
               </div>
-              <div className="textim">
-                <p className="text-[8px] text-[#000] font-inter font-medium">
-                  Доступно в
-                </p>
-                <h4 className="text-[16px] text-[#000] font-inter font-bold">
-                  Play store
-                </h4>
-              </div>
-            </div>
+            </Link>
           )}
-          {appData.steam_shown && (
-            <div className="steam bg-[#fff] pl-[15px] pr-[38px] py-[13px] rounded-[7px] flex flex-row items-center gap-[10px]">
-              <div className="lim">
-                <img src="/Steam_icon_logo.svg 1.png" alt="Steam" />
+          {appData.steam_shown == "true" && (
+            <Link to={appData.steam_url}>
+              {" "}
+              <div className="steam bg-[#fff] pl-[15px] pr-[38px] py-[13px] rounded-[7px] flex flex-row items-center gap-[10px]">
+                <div className="lim">
+                  <img src="/Steam_icon_logo.svg 1.png" alt="Steam" />
+                </div>
+                <div className="textim">
+                  <p className="text-[8px] text-[#000] font-inter font-medium">
+                    Доступно в
+                  </p>
+                  <h4 className="text-[16px] text-[#000] font-inter font-bold">
+                    Steam
+                  </h4>
+                </div>
               </div>
-              <div className="textim">
-                <p className="text-[8px] text-[#000] font-inter font-medium">
-                  Доступно в
-                </p>
-                <h4 className="text-[16px] text-[#000] font-inter font-bold">
-                  Steam
-                </h4>
-              </div>
-            </div>
+            </Link>
           )}
         </div>
         <div className="imgs flex flex-row flex-wrap gap-[14px] xl:gap-[18px] mt-[100px] justify-center">
