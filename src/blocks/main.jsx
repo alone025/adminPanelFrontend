@@ -94,13 +94,20 @@ function Main() {
 							transition={{ duration: 0.8, ease: 'easeInOut' }}
 						/>
 
-						<motion.img
+{
+							headerData.headerImgType == "true" ? (
+								<motion.img
 							src={headerData.headerImg}
 							alt=''
 							initial={{ opacity: 0, y: 50 }}
 							animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
 							transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
 						/>
+							) : (
+								<></>
+							)
+						}
+						
 					</motion.div>
 				</motion.div>
 			</Wrapper>

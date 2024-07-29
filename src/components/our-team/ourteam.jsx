@@ -15,7 +15,7 @@ function Ourteam() {
 		fetch('https://e334514e7b754cb9.mokky.dev/our_team')
 			.then(response => response.json())
 			.then(data => {
-				setTeamData(data)
+				setTeamData(data[0])
 				setCardss(data[0].cards)
 			})
 			.catch(error => {
@@ -32,7 +32,7 @@ function Ourteam() {
 			/>
 			<Wrapper>
 				<div className='pt-[100px] mx-[50px] 2xl:mx-0 font-inter'>
-					<div className='blog_blur right-0 w-[!1000px]'></div>
+					<div className='blog_blur right-0 !w-[1000px]'></div>
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Wrapper from '../layout/wrapper'
@@ -96,7 +96,10 @@ function Cards() {
 								className='image-card flex justify-center max-w-[200px] md:max-w-[250px] lg:max-w-[300px] 2xl:max-w-[400px] mx-auto items-center mt-[15px]'
 								variants={imageVariants}
 							>
-								<img src={card.image} alt='' />
+								{
+									cardData[2].imageType == "true" ? (<img src={card.image} alt='' />) : (<></>)
+								}
+								
 							</motion.div>
 						</motion.div>
 					))}
